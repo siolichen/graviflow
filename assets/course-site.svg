@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 240" role="img" aria-label="課程網站示意">
+  <defs>
+    <path id="spark" d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"/>
+  </defs>
+  <!-- sparkles -->
+  <use href="#spark" fill="#EC8A73" transform="translate(4 98) scale(1.05)"/>
+  <use href="#spark" fill="#EC8A73" transform="translate(394 128) scale(.95)"/>
+
+  <!-- laptop base -->
+  <path d="M10 204 H410 Q410 220 394 220 H26 Q10 220 10 204 Z" fill="#fbfcfe" stroke="#1B3A6B" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="180" y="204" width="60" height="6" rx="2" fill="#1B3A6B"/>
+  <!-- screen -->
+  <rect x="40" y="18" width="340" height="186" rx="10" fill="#fbfcfe" stroke="#1B3A6B" stroke-width="5"/>
+  <circle cx="58" cy="34" r="3.6" fill="#EC8A73"/>
+  <circle cx="70" cy="34" r="3.6" fill="#1B3A6B"/>
+  <circle cx="82" cy="34" r="3.6" fill="#1B3A6B"/>
+  <line x1="42" y1="46" x2="378" y2="46" stroke="#1B3A6B" stroke-width="2.5"/>
+
+  <!-- main video -->
+  <rect x="56" y="58" width="204" height="132" rx="4" fill="#FBE1D9"/>
+  <!-- astronaut teacher -->
+  <g stroke="#1B3A6B" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M76 176 V146 Q76 124 100 122 H118 Q142 124 142 146 V176 Z" fill="#fbfcfe" stroke-width="4"/>
+    <path d="M136 138 L158 126" stroke="#1B3A6B" stroke-width="16"/>
+    <path d="M136 138 L158 126" stroke="#fbfcfe" stroke-width="9"/>
+    <circle cx="160" cy="124" r="6.5" fill="#fbfcfe" stroke-width="3.5"/>
+    <line x1="162" y1="121" x2="190" y2="92" stroke-width="3.5"/>
+    <circle cx="191" cy="91" r="3" fill="#1B3A6B" stroke="none"/>
+    <rect x="76" y="92" width="8" height="16" rx="3" fill="#fbfcfe" stroke-width="3"/>
+    <circle cx="108" cy="98" r="27" fill="#fbfcfe" stroke-width="4"/>
+    <ellipse cx="113" cy="101" rx="18" ry="16" fill="#132c57" stroke="none"/>
+    <path d="M121 90 Q129 96 128 107" fill="none" stroke="#EC8A73" stroke-width="3.5"/>
+    <rect x="92" y="140" width="25" height="23" rx="3" fill="#1B3A6B" stroke-width="3" transform="rotate(-8 104 151)"/>
+    <circle cx="112" cy="156" r="5.5" fill="#fbfcfe" stroke-width="3"/>
+  </g>
+  <!-- play button -->
+  <circle cx="214" cy="116" r="21" fill="#EC8A73"/>
+  <path d="M207 105 L226 116 L207 127 Z" fill="#fbfcfe"/>
+  <!-- progress bar -->
+  <rect x="62" y="172" width="192" height="12" rx="3" fill="#fbfcfe"/>
+  <path d="M68 174 L75 178 L68 182 Z" fill="#EC8A73"/>
+  <line x1="82" y1="178" x2="246" y2="178" stroke="#b9c3d6" stroke-width="3" stroke-linecap="round"/>
+  <line x1="82" y1="178" x2="152" y2="178" stroke="#EC8A73" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="152" cy="178" r="4.5" fill="#EC8A73"/>
+
+  <!-- lesson list -->
+  <rect x="270" y="60" width="98" height="38" rx="3" fill="#fbfcfe" stroke="#1B3A6B" stroke-width="2.5"/>
+  <rect x="276" y="66" width="28" height="26" rx="2" fill="#EC8A73"/>
+  <path d="M285 72 L297 79 L285 86 Z" fill="#fbfcfe"/>
+  <line x1="312" y1="73" x2="356" y2="73" stroke="#1B3A6B" stroke-width="3" stroke-linecap="round"/>
+  <line x1="312" y1="84" x2="342" y2="84" stroke="#b9c3d6" stroke-width="3" stroke-linecap="round"/>
+
+  <rect x="276" y="110" width="28" height="26" rx="2" fill="#FBE1D9"/>
+  <path d="M285 116 L297 123 L285 130 Z" fill="#EC8A73"/>
+  <line x1="312" y1="117" x2="356" y2="117" stroke="#1B3A6B" stroke-width="3" stroke-linecap="round"/>
+  <line x1="312" y1="128" x2="342" y2="128" stroke="#b9c3d6" stroke-width="3" stroke-linecap="round"/>
+
+  <rect x="276" y="152" width="28" height="26" rx="2" fill="#FBE1D9"/>
+  <path d="M285 158 L297 165 L285 172 Z" fill="#EC8A73"/>
+  <line x1="312" y1="159" x2="356" y2="159" stroke="#1B3A6B" stroke-width="3" stroke-linecap="round"/>
+  <line x1="312" y1="170" x2="342" y2="170" stroke="#b9c3d6" stroke-width="3" stroke-linecap="round"/>
+</svg>
