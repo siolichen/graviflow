@@ -158,8 +158,8 @@
       </a>
       <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
         <nav style="display: flex; align-items: center; gap: 32px; height: 100%;">
-          <a href="about.html" style="height: 100%; display: flex; align-items: center; padding: 4px 4px 0; border-bottom: 4px solid {{ navAbout }}; font-size: 17px; letter-spacing: .06em; color: #1B3A6B; transition: border-color .25s;" style-hover="border-bottom-color:#1B3A6B;color:#1B3A6B">關於我們</a>
-          <a href="works.html" style="height: 100%; display: flex; align-items: center; padding: 4px 4px 0; border-bottom: 4px solid {{ navWorks }}; font-size: 17px; letter-spacing: .06em; color: #1B3A6B; transition: border-color .25s;" style-hover="border-bottom-color:#1B3A6B;color:#1B3A6B">作品集</a>
+          <a href="about/" style="height: 100%; display: flex; align-items: center; padding: 4px 4px 0; border-bottom: 4px solid {{ navAbout }}; font-size: 17px; letter-spacing: .06em; color: #1B3A6B; transition: border-color .25s;" style-hover="border-bottom-color:#1B3A6B;color:#1B3A6B">關於我們</a>
+          <a href="works/" style="height: 100%; display: flex; align-items: center; padding: 4px 4px 0; border-bottom: 4px solid {{ navWorks }}; font-size: 17px; letter-spacing: .06em; color: #1B3A6B; transition: border-color .25s;" style-hover="border-bottom-color:#1B3A6B;color:#1B3A6B">作品集</a>
           <a href="#contact" style="background: #1B3A6B; color: #fff; font-size: 17px; letter-spacing: .06em; padding: 12px 26px;" style-hover="background:#EC8A73;color:#fff">免費線上諮詢</a>
         </nav>
       </sc-if>
@@ -173,8 +173,8 @@
     </div>
     <sc-if value="{{ showMenu }}" hint-placeholder-val="{{ false }}">
       <nav style="border-top: 1px solid #C2C4C8; padding: 12px 24px 28px; display: flex; flex-direction: column; align-items: stretch;">
-        <a href="about.html" onClick="{{ closeMenu }}" style="font-size: 18px; letter-spacing: .06em; color: #1B3A6B; padding: 16px 4px; border-bottom: 1px solid #D2D4D8;">關於我們</a>
-        <a href="works.html" onClick="{{ closeMenu }}" style="font-size: 18px; letter-spacing: .06em; color: #1B3A6B; padding: 16px 4px; border-bottom: 1px solid #D2D4D8;">作品集</a>
+        <a href="about/" onClick="{{ closeMenu }}" style="font-size: 18px; letter-spacing: .06em; color: #1B3A6B; padding: 16px 4px; border-bottom: 1px solid #D2D4D8;">關於我們</a>
+        <a href="works/" onClick="{{ closeMenu }}" style="font-size: 18px; letter-spacing: .06em; color: #1B3A6B; padding: 16px 4px; border-bottom: 1px solid #D2D4D8;">作品集</a>
         <a href="#contact" onClick="{{ closeMenu }}" style="margin-top: 20px; background: #1B3A6B; color: #fff; font-size: 17px; letter-spacing: .06em; padding: 14px 26px; text-align: center;">免費線上諮詢</a>
       </nav>
     </sc-if>
@@ -359,7 +359,7 @@
     </sc-if>
 
     <div data-reveal="up" style="display: flex; justify-content: center; margin-top: 72px;">
-      <a href="works.html" style="background: #E4E4E4; border: 2px solid #1B3A6B; color: #1B3A6B; font-size: 19px; font-weight: 600; letter-spacing: .06em; padding: 10px 32px; box-shadow: 6px 6px 0 #1B3A6B; transition: transform .2s, box-shadow .2s;" style-hover="color:#1B3A6B;transform:translate(3px,3px);box-shadow:3px 3px 0 #1B3A6B">更多案例 →</a>
+      <a href="works/" style="background: #E4E4E4; border: 2px solid #1B3A6B; color: #1B3A6B; font-size: 19px; font-weight: 600; letter-spacing: .06em; padding: 10px 32px; box-shadow: 6px 6px 0 #1B3A6B; transition: transform .2s, box-shadow .2s;" style-hover="color:#1B3A6B;transform:translate(3px,3px);box-shadow:3px 3px 0 #1B3A6B">更多案例 →</a>
     </div>
   </section>
 
@@ -426,8 +426,8 @@
       <div style="border-top: 1px solid #B9BCC2; padding-top: 14px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
         <span style="color: #33476A; font-size: 14px; letter-spacing: .06em;">© 2026 引力流域 GraviFlow Design</span>
         <div style="display: flex; align-items: center; gap: 24px;">
-          <a href="privacy.html" style="color: #33476A; font-size: 14px; letter-spacing: .06em;" style-hover="color:#EC8A73">隱私權政策</a>
-          <a href="refund.html" style="color: #33476A; font-size: 14px; letter-spacing: .06em;" style-hover="color:#EC8A73">退換貨政策</a>
+          <a href="privacy/" style="color: #33476A; font-size: 14px; letter-spacing: .06em;" style-hover="color:#EC8A73">隱私權政策</a>
+          <a href="refund/" style="color: #33476A; font-size: 14px; letter-spacing: .06em;" style-hover="color:#EC8A73">退換貨政策</a>
         </div>
       </div>
     </div>
@@ -828,15 +828,15 @@ class Component extends DCLogic {
   renderVals() {
     if (!this.stars || this._sc !== this.props.starCount) { this._sc = this.props.starCount; this.stars = this.buildStars(); }
     const cases = [
-      { name: '國考學姐', href: 'works.html#work-guokao', img: 'assets/case-guokao.png', alt: '國考學姐 網站畫面', tag: '國考備考策略諮詢', avatar: 'assets/avatar-guokao.jpg', avatarScale: 1,
+      { name: '國考學姐', href: 'works/#work-guokao', img: 'assets/case-guokao.png', alt: '國考學姐 網站畫面', tag: '國考備考策略諮詢', avatar: 'assets/avatar-guokao.jpg', avatarScale: 1,
         lead: '社群有流量，\n卻不一定能變成客戶？',
         lines: ['將國考經歷、專業文章、免費資源與付費諮詢整合進網站，讓考生從認識、建立信任到留下名單、預約服務，都有清楚的路徑，不再只看完貼文就離開。'],
         quote: '網站整合了我所有的資源及服務，並精準吸引適合服務的人前來詢問服務，讓我至少原先一半以上跟考生客戶溝通的時間。視覺上也呈現了我個人親和卻精準的風格，圖片小動效充滿巧思，很喜歡。' },
-      { name: '薇凡', href: 'works.html#work-vivant', img: 'assets/case-xin.png', alt: '薇凡 網站畫面', tag: '自我對話練習引導教學', avatar: 'assets/avatar-weifan.png', avatarScale: 1.3,
+      { name: '薇凡', href: 'works/#work-vivant', img: 'assets/case-xin.png', alt: '薇凡 網站畫面', tag: '自我對話練習引導教學', avatar: 'assets/avatar-weifan.png', avatarScale: 1.3,
         lead: '專業服務很有價值，\n卻總是說不清楚？',
         lines: ['從客戶的真實困擾切入，把抽象的自我對話練習變成容易理解的服務介紹，讓訪客在網站上產生共鳴、建立信任，進而主動詢問與預約。'],
         quote: '一直以來需要解釋什麼是自我對話練習，在有了網站之後，就可以整套服務直接展示給詢問者看，減省我的時間也增加信任度。因為這樣，詢問及預約也增加了。' },
-      { name: '阿布拉', href: 'works.html#work-abula', img: 'assets/case-abula.png', alt: '阿布拉 網站畫面', tag: '中部包車接送服務', avatar: 'assets/avatar-abula.png', avatarScale: 1,
+      { name: '阿布拉', href: 'works/#work-abula', img: 'assets/case-abula.png', alt: '阿布拉 網站畫面', tag: '中部包車接送服務', avatar: 'assets/avatar-abula.png', avatarScale: 1,
         lead: '一個人的好服務，\n也值得擁有讓人驚豔的品牌網站。',
         lines: ['將司機個人特色、車輛資訊與包車服務整合成有質感的品牌入口，讓新客戶不必反覆詢問，就能認識服務、建立信任，也讓每一次轉介紹更有說服力。'],
         quote: '以前有人問包車，我都要用 LINE 一個個說明。現在有網站後，直接把網址給客人，就能先了解服務、車子和我的介紹。對第一次認識我的客人來說，也更容易建立信任，看起來更專業。' }
