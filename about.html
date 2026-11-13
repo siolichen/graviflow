@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>window.__resources = {};</script>
+<script src="vendor/react.production.min.js"></script>
+<script src="vendor/react-dom.production.min.js"></script>
+<script src="support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+<title>關於我們｜引力流域設計| 專業變吸客引力的網站架設、數位行銷</title>
+<meta name="description" content="認識引力流域設計主理人 Oli 與品牌理念：先看懂你的品牌再開始設計，結合 SEO、轉換設計與數據追蹤，從線上諮詢、報價到交付與維護，打造持續發揮作用的數位門店。">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.graviflowdesign.com/about">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="引力流域設計 GraviFlow Design">
+<meta property="og:title" content="關於我們｜引力流域設計">
+<meta property="og:description" content="讓專業產生引力，讓對的人靠近。認識引力流域的緣起、理念與服務流程。">
+<meta property="og:url" content="https://www.graviflowdesign.com/about">
+<meta property="og:image" content="https://www.graviflowdesign.com/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1B3A6B">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"AboutPage","@id":"https://www.graviflowdesign.com/about#webpage","url":"https://www.graviflowdesign.com/about","name":"關於我們｜引力流域設計","inLanguage":"zh-Hant-TW","isPartOf":{"@id":"https://www.graviflowdesign.com/#website"},"about":{"@id":"https://www.graviflowdesign.com/#org"}},{"@type":"Person","name":"Oli","jobTitle":"主理人","worksFor":{"@id":"https://www.graviflowdesign.com/#org"},"image":"https://www.graviflowdesign.com/assets/oli.webp"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://www.graviflowdesign.com/"},{"@type":"ListItem","position":2,"name":"關於我們","item":"https://www.graviflowdesign.com/about"}]},{"@type":"HowTo","name":"引力流域服務流程","step":[{"@type":"HowToStep","position":1,"name":"線上諮詢溝通"},{"@type":"HowToStep","position":2,"name":"報價"},{"@type":"HowToStep","position":3,"name":"簽約"},{"@type":"HowToStep","position":4,"name":"客戶資訊上傳"},{"@type":"HowToStep","position":5,"name":"設計製作"},{"@type":"HowToStep","position":6,"name":"交付成品"},{"@type":"HowToStep","position":7,"name":"維護"}]}]}</script>
+<style>
+  html, body { margin: 0; padding: 0; background: #E4E4E4; }
+  * { box-sizing: border-box; }
+  a { color: #1B3A6B; text-decoration: none; white-space: nowrap; }
+  a:hover { color: #EC8A73; }
+  ::selection { background: #EC8A73; color: #fff; }
+  @keyframes gf-float { 0%,100% { transform: translate(-16px, -16px) rotate(-2deg); } 50% { transform: translate(16px, 16px) rotate(2deg); } }
+  @keyframes gf-float-rev { 0%,100% { transform: translate(16px, -16px) rotate(2deg); } 50% { transform: translate(-16px, 16px) rotate(-2deg); } }
+  @keyframes gf-tw { 0%,100% { opacity: .15; transform: scale(.6); } 50% { opacity: 1; transform: scale(1.1); } }
+  @keyframes gf-spin { to { transform: rotate(360deg); } }
+  @keyframes gf-dash { to { background-position: 18px 0; } }
+  @keyframes gf-dashv { to { background-position: 0 18px; } }
+  [data-fstep] { transition: background-color .45s ease, transform .45s cubic-bezier(.2,.8,.2,1); }
+  [data-fstep] svg { transition: stroke .45s ease; }
+  [data-fstep][data-on="1"] { background: #1B3A6B !important; transform: scale(1.06); }
+  [data-fstep][data-on="1"] svg { stroke: #fff !important; }
+  @media (max-width: 959px) {
+    [data-sechead] { min-height: 0 !important; padding-top: 62px !important; padding-bottom: 4px; }
+    [data-sechead] > p { margin-top: 20px !important; }
+    [data-secbody] { margin-top: 26px !important; }
+    section[data-sec] { padding-top: 84px !important; }
+    [data-secbody2] { margin-top: 48px !important; }
+    [data-ah1] { font-size: 27px !important; }
+    [data-drift-el] { width: 112px !important; right: 7% !important; top: -132px !important; transform: none !important; }
+    [data-oli] { position: relative !important; top: auto !important; flex-basis: 200px !important; }
+    [data-oli] > div:first-child { width: 200px !important; height: 200px !important; }
+    [data-oli] > div:first-child img { width: 225px !important; }
+    [data-stack] { position: sticky !important; top: 100px; align-self: start; opacity: 1 !important; transform: none !important; transition: none !important; }
+    [data-stack]:nth-child(2) { top: 114px; }
+    [data-stack]:nth-child(3) { top: 128px; }
+    [data-stack]:nth-child(4) { top: 142px; }
+  }
+  @keyframes gf-astro-drift { 0%,100% { transform: translate(0, 0) rotate(0deg); } 50% { transform: translate(-3.6%, -3.6%) rotate(-3deg); } }
+  @keyframes gf-load { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }
+  @keyframes gf-bob { 0%,100% { transform: translateY(-6px); } 50% { transform: translateY(6px); } }
+  @keyframes gf-pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+  @media (max-width: 959px) {
+    [data-foot-row] { display: flex !important; justify-content: space-between; align-items: center; gap: 12px; }
+    [data-foot-row] > span:last-child:empty { display: none; }
+    [data-foot-row] > div { justify-content: flex-end !important; gap: 10px !important; }
+  }
+</style>
+</helmet>
+
+<div style="position: relative; font-family: 'Noto Serif TC', serif; font-weight: 500; color: #1B3A6B; background: #E4E4E4; overflow-x: clip;">
+  {{ starField }}
+  <sc-if value="{{ loading }}" hint-placeholder-val="{{ true }}">
+    <div aria-hidden="true" style="position: fixed; inset: 0; z-index: 300; background: #E4E4E4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; transition: opacity .7s ease; opacity: {{ loaderOpacity }};">
+      <span style="position: relative; display: block; width: 180px;"><img src="assets/loader-badge-bg.webp" alt="" style="width: 100%; height: auto; display: block;"><img src="assets/loader-astro.webp" alt="" style="position: absolute; left: 0; top: 0; width: 100%; height: auto; display: block; transform-origin: 54% 50%; animation: gf-astro-drift 3.6s ease-in-out infinite;"></span>
+      <img src="assets/wordmark-navy.webp" alt="" style="height: 46px; width: auto;">
+      <span style="position: relative; width: 140px; height: 2px; background: rgba(27,58,107,.15); overflow: hidden;"><span style="position: absolute; left: 0; top: 0; width: 40%; height: 100%; background: #EC8A73; animation: gf-load 1.2s ease-in-out infinite;"></span></span>
+    </div>
+  </sc-if>
+
+  <header style="position: sticky; top: 0; z-index: 60; background: rgba(228,228,228,.7); backdrop-filter: blur(10px); border-bottom: 1px solid #C2C4C8;">
+    <div style="max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 28px;">
+      <a href="index.html" style="display: flex; align-items: center; gap: 12px; flex-shrink: 0;">
+        <img src="assets/badge-navy-cut.webp" alt="引力流域" style="width: 56px; height: auto;" />
+        <img src="assets/wordmark-navy.webp" alt="引力流域 GraviFlow Design" style="height: 30px; width: auto;" />
+      </a>
+      <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+        <nav style="display: flex; align-items: center; gap: 32px; height: 100%;">
+          <a href="#top" style="height: 100%; display: flex; align-items: center; padding: 4px 4px 0; border-bottom: 4px solid transparent; font-size: 17px; letter-spacing: .06em; color: #1B3A6B; transition: border-color .25s;" style-hover="border-bottom-color:#1B3A6B;color:#1B3A6B">關於我們</a>
+          <a href="works.html" style="height: 100%; display: flex; align-items: center; padding: 4px 4px 0; border-bottom: 4px solid transparent; font-size: 17px; letter-spacing: .06em; color: #1B3A6B; transition: border-color .25s;" style-hover="border-bottom-color:#1B3A6B;color:#1B3A6B">作品集</a>
+          <a href="#contact" style="background: #1B3A6B; color: #fff; font-size: 17px; letter-spacing: .06em; padding: 12px 26px;" style-hover="background:#EC8A73;color:#fff">免費線上諮詢</a>
+        </nav>
+      </sc-if>
+      <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+        <button type="button" onClick="{{ toggleMenu }}" aria-label="選單" aria-expanded="{{ menuOpen }}" style="all: unset; cursor: pointer; width: 48px; height: 48px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;">
+          <span style="width: 26px; height: 2px; background: #1B3A6B; transition: transform .3s; transform: {{ bar1 }};"></span>
+          <span style="width: 26px; height: 2px; background: #1B3A6B; transition: opacity .3s; opacity: {{ bar2 }};"></span>
+          <span style="width: 26px; height: 2px; background: #1B3A6B; transition: transform .3s; transform: {{ bar3 }};"></span>
+        </button>
+      </sc-if>
+    </div>
+    <sc-if value="{{ showMenu }}" hint-placeholder-val="{{ false }}">
+      <nav style="border-top: 1px solid #C2C4C8; padding: 12px 24px 28px; display: flex; flex-direction: column; align-items: stretch;">
+        <a href="#top" onClick="{{ closeMenu }}" style="font-size: 18px; letter-spacing: .06em; color: #1B3A6B; padding: 16px 4px; border-bottom: 1px solid #D2D4D8;">關於我們</a>
+        <a href="works.html" onClick="{{ closeMenu }}" style="font-size: 18px; letter-spacing: .06em; color: #1B3A6B; padding: 16px 4px; border-bottom: 1px solid #D2D4D8;">作品集</a>
+        <a href="#contact" onClick="{{ closeMenu }}" style="margin-top: 20px; background: #1B3A6B; color: #fff; font-size: 17px; letter-spacing: .06em; padding: 14px 26px; text-align: center;">免費線上諮詢</a>
+      </nav>
+    </sc-if>
+    <span aria-hidden="true" style="position: absolute; left: 0; bottom: -1px; width: 100%; height: 3px; overflow: hidden; pointer-events: none;"><span data-prog="" style="display: block; height: 100%; background: #1B3A6B; transform-origin: left; transform: scaleX(0);"></span></span>
+  </header>
+
+  <section id="top" style="position: relative; overflow: hidden; background: linear-gradient(180deg, #E4E4E4 0%, #8A9CB8 10%, #2A4877 22%, #1B3A6B 32%, #1B3A6B 72%, #8396B3 90%, #E4E4E4 100%); padding: 150px 24px 170px;">
+    {{ heroStars }}
+    <div style="position: relative; z-index: 6; max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px;">
+      <p data-seq="p" style="font-size: 16px; letter-spacing: .3em; color: #EC8A73; margin: 0;">ABOUT US</p>
+      <h1 data-ah1="" aria-label="讓專業產生引力，讓對的人靠近。" style="font-size: 40px; font-weight: 700; line-height: 1.5; letter-spacing: .04em; color: #fff; margin: 0; display: flex; flex-wrap: wrap; justify-content: center;"><span aria-hidden="true" style="display: inline-block;"><sc-for list="{{ h1a }}" as="ch" hint-placeholder-count="8"><span data-ch="" style="display: inline-block;">{{ ch }}</span></sc-for></span><span aria-hidden="true" style="display: inline-block;"><sc-for list="{{ h1b }}" as="ch" hint-placeholder-count="7"><span data-ch="" style="display: inline-block;">{{ ch }}</span></sc-for></span></h1>
+    </div>
+  </section>
+  <div aria-hidden="true" data-drift="" style="position: relative; height: 0; z-index: 7; pointer-events: none;">
+    <div data-drift-el="" style="position: absolute; right: 6%; top: -270px; width: 210px; will-change: transform;">
+      <div style="animation: gf-float-rev 8s ease-in-out infinite;"><img src="assets/astro-navy.webp" alt="" style="width: 100%; height: auto; display: block; transform: scaleX(-1);" /></div>
+    </div>
+  </div>
+
+  <section style="position: relative; z-index: 6; padding: 120px 24px 0;">
+    <div data-reveal="up" style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <svg viewBox="0 0 24 24" style="width: 44px; fill: #1B3A6B;"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"></path></svg>
+      <div data-sechead="" style="position: relative; width: 100%; min-height: 340px; padding-top: 104px; display: flex; flex-direction: column; align-items: center;">
+        <img src="assets/grid-blue.webp" alt="" style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: min(620px, 100%); opacity: .42; pointer-events: none;" />
+        <h2 style="position: relative; font-size: 30px; font-weight: 700; line-height: 1.6; letter-spacing: .04em; margin: 0;">引力流域的緣起</h2>
+      </div>
+    </div>
+
+    <div data-secbody="" style="max-width: 1000px; margin: 72px auto 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 56px;">
+      <div data-oli="" data-reveal="zoom" style="flex: 0 0 240px; position: sticky; top: 120px;">
+        <div style="position: relative; width: 240px; height: 240px; border-radius: 50%; background: #C9D1DE; border: 2px solid #1B3A6B; box-shadow: 10px 10px 0 #EC8A73; overflow: hidden;">
+          <img src="assets/oli.webp" alt="主理人 Oli" style="position: absolute; left: 50%; top: 6px; transform: translateX(-56%); width: 270px; height: auto; display: block; filter: brightness(1.08);" />
+        </div>
+        <svg viewBox="0 0 24 24" style="position: absolute; left: -14px; top: 6px; width: 30px; fill: #EC8A73;"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"></path></svg>
+      </div>
+      <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 14px;">
+        <div data-reveal="up" style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px;">
+          <p style="font-size: 16px; letter-spacing: .1em; color: #33476A; margin: 0;">主理人 Oli</p>
+          <h3 style="font-size: 22px; font-weight: 700; line-height: 1.6; letter-spacing: .04em; margin: 0; padding-bottom: 14px; border-bottom: 2px solid #1B3A6B; text-wrap: pretty;">從自己的品牌開始，走進網站與獲客的世界</h3>
+        </div>
+        <p data-reveal="up" style="font-size: 17px; line-height: 1.85; color: #33476A; margin: 0;">一開始，我只是想把自己的專業做成一門生意。</p>
+        <p data-reveal="up" style="font-size: 17px; line-height: 1.85; color: #33476A; margin: 0; text-wrap: pretty;">為了找到更多客戶，我開始學行銷、寫內容、做銷售漏斗、架網站、發電子報。真正開始後才發現，每一個看似簡單的環節，背後都是另一門專業。</p>
+        <p data-reveal="up" style="font-size: 17px; line-height: 1.85; color: #33476A; margin: 0; text-wrap: pretty;">明明最想解決的是「怎麼找到更多客戶」，時間卻常常花在「這個到底要怎麼設定？」</p>
+        <p data-reveal="up" style="font-size: 17px; line-height: 1.85; color: #33476A; margin: 0; text-wrap: pretty;">一路摸索下來，我學會了網站、內容、電子報與獲客流程，也更深刻地明白：</p>
+        <p data-reveal="up" style="font-size: 18px; font-weight: 700; line-height: 1.85; color: #1B3A6B; margin: 17px 0; text-wrap: pretty;"><span style="background: linear-gradient(transparent 62%, rgba(236,138,115,.55) 62%);">「我做得到」和「這件事值得我自己做」，是兩個不同的問題。</span></p>
+        <p data-reveal="up" style="font-size: 17px; line-height: 1.85; color: #33476A; margin: 0;">這也成為我創立引力流域的起點。</p>
+        <p data-reveal="up" style="font-size: 17px; line-height: 1.85; color: #33476A; margin: 0; text-wrap: pretty;">因為自己走過這條路，我知道網站後面真正連著的，是內容、名單、預約、服務，以及最後的生意。</p>
+        <p data-reveal="up" style="font-size: 17px; line-height: 1.85; color: #33476A; margin: 0; text-wrap: pretty;">所以我想做的，不只是完成一個網站，而是把這些環節整理、串起來——</p>
+        <p data-reveal="up" style="font-size: 18px; font-weight: 700; line-height: 1.85; color: #1B3A6B; margin: 0; text-wrap: pretty;"><span style="background: linear-gradient(transparent 62%, rgba(236,138,115,.55) 62%);">讓你的專業被看見，讓對的人理解你的價值；也把你的時間，留給真正只有你能做好的事。</span></p>
+      </div>
+    </div>
+
+    <div data-secbody2="" style="max-width: 1100px; margin: 110px auto 0; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 56px;">
+      <article data-reveal="zoom" style="position: relative; background: #E4E4E4; border: 2px solid #EC8A73; padding: 44px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px;">
+        <svg viewBox="0 0 24 24" style="position: absolute; left: -22px; top: -22px; width: 42px; fill: #EC8A73;"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"></path></svg>
+        <h3 style="font-size: 24px; font-weight: 700; line-height: 1.5; letter-spacing: .06em; margin: 0; padding: 0 6px; background: linear-gradient(transparent 55%, #EC8A73 55%);">引力，是吸引。</h3>
+        <p style="font-size: 16px; line-height: 2; color: #33476A; margin: 0; max-width: 320px; text-wrap: pretty;">讓真正需要你的專業的人，看見你、注意你，願意停下來認識你。</p>
+      </article>
+      <article data-reveal="zoom" data-delay="200" style="position: relative; background: #E4E4E4; border: 2px solid #EC8A73; padding: 44px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px;">
+        <svg viewBox="0 0 24 24" style="position: absolute; left: -22px; top: -22px; width: 42px; fill: #EC8A73;"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"></path></svg>
+        <h3 style="font-size: 24px; font-weight: 700; line-height: 1.5; letter-spacing: .06em; margin: 0; padding: 0 6px; background: linear-gradient(transparent 55%, #EC8A73 55%);">流域，是路徑。</h3>
+        <p style="font-size: 16px; line-height: 2; color: #33476A; margin: 0; max-width: 320px; text-wrap: pretty;">從第一次看見，到理解、信任，再到預約或購買，讓客戶沿著清楚的路徑，一步步靠近。</p>
+      </article>
+    </div>
+
+    <div data-reveal="up" style="max-width: 760px; margin: 72px auto 0; text-align: center;">
+      <p style="font-size: 17px; line-height: 2.1; color: #33476A; margin: 0; text-wrap: pretty;">我們把<strong style="font-weight: 700; color: #1B3A6B;">商業邏輯與設計</strong>放在一起思考，<br />從品牌網站到獲客系統，打造一座不只好看，更能持續發揮作用的數位門店。</p>
+    </div>
+  </section>
+
+  <section data-sec="" style="position: relative; z-index: 6; padding: 150px 24px 0;">
+    <div data-reveal="up" style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <svg viewBox="0 0 24 24" style="width: 44px; fill: #1B3A6B;"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"></path></svg>
+      <div data-sechead="" style="position: relative; width: 100%; min-height: 340px; padding-top: 104px; display: flex; flex-direction: column; align-items: center;">
+        <img src="assets/grid-blue.webp" alt="" style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: min(620px, 100%); opacity: .42; pointer-events: none;" />
+        <h2 style="position: relative; font-size: 30px; font-weight: 700; line-height: 1.6; letter-spacing: .04em; margin: 0;">我們的理念與特色</h2>
+      </div>
+    </div>
+
+    <div data-secbody="" style="max-width: 1100px; margin: 72px auto 0; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 56px;">
+      <sc-for list="{{ values }}" as="v" hint-placeholder-count="4">
+        <article data-stack="" data-reveal="zoom" data-delay="{{ v.delay }}" style="position: relative; background: #E4E4E4; border: 2px solid #1B3A6B; box-shadow: 10px 10px 0 #EC8A73; padding: 40px 32px; display: flex; flex-direction: column; gap: 18px;">
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <span style="font-size: 40px; font-weight: 900; line-height: 1; color: #EC8A73; letter-spacing: .02em;">{{ v.no }}</span>
+            <span style="flex: 1; height: 2px; background: #1B3A6B;"></span>
+          </div>
+          <h3 style="font-size: 22px; font-weight: 700; line-height: 1.6; letter-spacing: .04em; margin: 0; text-wrap: pretty;">{{ v.title }}</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <sc-for list="{{ v.paras }}" as="p" hint-placeholder-count="2">
+              <p style="font-size: 16px; line-height: 2; color: #33476A; margin: 0; text-wrap: pretty;">{{ p.a }}<strong style="font-weight: 700; color: #1B3A6B;">{{ p.b }}</strong>{{ p.c }}</p>
+            </sc-for>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <section data-sec="" style="position: relative; z-index: 6; padding: 150px 24px 0;">
+    <div data-reveal="up" style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <svg viewBox="0 0 24 24" style="width: 44px; fill: #1B3A6B;"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"></path></svg>
+      <div data-sechead="" style="position: relative; width: 100%; min-height: 340px; padding-top: 104px; display: flex; flex-direction: column; align-items: center;">
+        <img src="assets/grid-blue.webp" alt="" style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: min(620px, 100%); opacity: .42; pointer-events: none;" />
+        <div style="position: absolute; left: -60px; top: -100px; width: 210px; pointer-events: none; animation: gf-float 8s ease-in-out infinite;"><img src="assets/astro-navy.webp" alt="" style="width: 100%; height: auto; display: block;" /></div>
+        <h2 style="position: relative; font-size: 30px; font-weight: 700; line-height: 1.6; letter-spacing: .04em; margin: 0;">從引力，到流域。</h2>
+        <p style="position: relative; font-size: 17px; line-height: 2.1; color: #33476A; margin: 56px 0 0;">我們想做的，不只是幫你完成一個網站。<br />而是讓你的專業有一個真正屬於自己的數位門店：</p>
+      </div>
+    </div>
+    <div data-secbody="" data-reveal="zoom" style="position: relative; max-width: 1000px; margin: 56px auto 0; background: #1B3A6B; border: 2px solid #1B3A6B; box-shadow: 10px 10px 0 #EC8A73; padding: 64px 40px 56px; overflow: hidden;">
+      {{ panelStars }}
+      <img src="assets/grid-white.webp" alt="" style="position: absolute; left: 50%; bottom: -46%; transform: translateX(-50%); width: 90%; opacity: .14; pointer-events: none;" />
+      <div style="position: relative; display: flex; flex-direction: {{ flowDir }}; align-items: center; justify-content: center;">
+        <div data-reveal="zoom" data-delay="200" style="width: 200px; display: flex; flex-direction: column; align-items: center; gap: 18px;">
+          <div style="position: relative; width: 150px; height: 150px; display: flex; align-items: center; justify-content: center;">
+            <span style="position: absolute; inset: 0; border-radius: 50%; border: 2px dashed rgba(255,255,255,.55); animation: gf-spin 18s linear infinite;"></span>
+            <span style="position: absolute; inset: 14px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25);"></span>
+            <span style="width: 104px; height: 104px; border-radius: 50%; background: #E4E4E4; display: flex; align-items: center; justify-content: center;"><svg viewBox="0 0 24 24" width="46" height="46" fill="none" stroke="#1B3A6B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v8a6 6 0 0 0 12 0V3h-4v8a2 2 0 0 1-4 0V3z M6 7h4 M14 7h4"></path></svg></span>
+            <span style="position: absolute; right: 4px; top: 4px; width: 38px; height: 38px; border-radius: 50%; background: #EC8A73; color: #fff; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center;">01</span>
+          </div>
+          <span style="font-size: 20px; font-weight: 700; letter-spacing: .08em; color: #fff;">吸引對的人</span>
+        </div>
+        <div data-reveal="up" data-delay="450" style="flex: {{ connFlex }}; width: {{ connW }}; height: {{ connH }}; min-width: 40px; display: flex; align-items: center; justify-content: center; align-self: {{ connAlign }}; position: relative;">
+          <span style="position: relative; width: {{ lineW }}; height: {{ lineH }}; background-image: {{ dashBg }}; background-size: {{ dashSize }}; animation: {{ dashAnim }};"></span>
+          <svg viewBox="0 0 12 12" style="position: absolute; left: {{ arL }}; right: {{ arR }}; top: {{ arT }}; bottom: {{ arB }}; width: 14px; height: 14px; fill: #EC8A73; transform: {{ arrowRot }};"><path d="M0 0 L12 6 L0 12 Z"></path></svg>
+        </div>
+        <div data-reveal="zoom" data-delay="650" style="width: 200px; display: flex; flex-direction: column; align-items: center; gap: 18px;">
+          <div style="position: relative; width: 150px; height: 150px; display: flex; align-items: center; justify-content: center;">
+            <span style="position: absolute; inset: 0; border-radius: 50%; border: 2px dashed rgba(255,255,255,.55); animation: gf-spin 18s linear infinite reverse;"></span>
+            <span style="position: absolute; inset: 14px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25);"></span>
+            <span style="width: 104px; height: 104px; border-radius: 50%; background: #E4E4E4; display: flex; align-items: center; justify-content: center;"><svg viewBox="0 0 24 24" width="46" height="46" fill="none" stroke="#1B3A6B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z M9 11l2 2 4-4"></path></svg></span>
+            <span style="position: absolute; right: 4px; top: 4px; width: 38px; height: 38px; border-radius: 50%; background: #EC8A73; color: #fff; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center;">02</span>
+          </div>
+          <span style="font-size: 20px; font-weight: 700; letter-spacing: .08em; color: #fff;">建立信任</span>
+        </div>
+        <div data-reveal="up" data-delay="900" style="flex: {{ connFlex }}; width: {{ connW }}; height: {{ connH }}; min-width: 40px; display: flex; align-items: center; justify-content: center; align-self: {{ connAlign }}; position: relative;">
+          <span style="position: relative; width: {{ lineW }}; height: {{ lineH }}; background-image: {{ dashBg }}; background-size: {{ dashSize }}; animation: {{ dashAnim }};"></span>
+          <svg viewBox="0 0 12 12" style="position: absolute; left: {{ arL }}; right: {{ arR }}; top: {{ arT }}; bottom: {{ arB }}; width: 14px; height: 14px; fill: #EC8A73; transform: {{ arrowRot }};"><path d="M0 0 L12 6 L0 12 Z"></path></svg>
+        </div>
+        <div data-reveal="zoom" data-delay="1100" style="width: 200px; display: flex; flex-direction: column; align-items: center; gap: 18px;">
+          <div style="position: relative; width: 150px; height: 150px; display: flex; align-items: center; justify-content: center;">
+            <span style="position: absolute; inset: 0; border-radius: 50%; border: 2px dashed rgba(236,138,115,.9); animation: gf-spin 18s linear infinite;"></span>
+            <span style="position: absolute; inset: 14px; border-radius: 50%; border: 1px solid rgba(236,138,115,.5);"></span>
+            <span style="width: 104px; height: 104px; border-radius: 50%; background: #EC8A73; display: flex; align-items: center; justify-content: center; animation: gf-pulse 2.4s ease-in-out infinite;"><svg viewBox="0 0 24 24" width="46" height="46" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l13 6.5-5.5 1.8L11.7 18z M13.5 12.3L19 18"></path></svg></span>
+            <span style="position: absolute; right: 4px; top: 4px; width: 38px; height: 38px; border-radius: 50%; background: #fff; color: #EC8A73; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center;">03</span>
+          </div>
+          <span style="font-size: 20px; font-weight: 700; letter-spacing: .08em; color: #fff;">引導行動</span>
+        </div>
+      </div>
+    </div>
+    <p data-reveal="up" style="max-width: 760px; margin: 56px auto 0; text-align: center; font-size: 17px; line-height: 2.1; color: #33476A;">讓每一次被看見，<br />都有機會成為下一次靠近。</p>
+  </section>
+
+  <section data-sec="" style="position: relative; z-index: 6; padding: 150px 24px 0;">
+    <div data-reveal="up" style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <svg viewBox="0 0 24 24" style="width: 44px; fill: #1B3A6B;"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"></path></svg>
+      <div data-sechead="" style="position: relative; width: 100%; min-height: 340px; padding-top: 104px; display: flex; flex-direction: column; align-items: center;">
+        <img src="assets/grid-blue.webp" alt="" style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: min(620px, 100%); opacity: .42; pointer-events: none;" />
+        <h2 style="position: relative; font-size: 30px; font-weight: 700; line-height: 1.6; letter-spacing: .04em; margin: 0;">合作流程</h2>
+      </div>
+    </div>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <div data-fwrap="" style="position: relative; max-width: 1100px; margin: 64px auto 0; padding: 0 24px;">
+        <span data-fline="" style="position: absolute; left: calc(24px + 100% / 12 - 48px / 12); right: calc(24px + 100% / 12 - 48px / 12); top: 38px; height: 3px; background: rgba(27,58,107,.15); border-radius: 2px; overflow: hidden;"><span style="position: absolute; inset: 0; background: #1B3A6B; transform-origin: left; transform: scaleX(0);"></span></span>
+        <div style="position: relative; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px;">
+          <sc-for list="{{ steps }}" as="s" hint-placeholder-count="6">
+            <div data-reveal="up" data-delay="{{ s.delay }}" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;">
+              <span data-fstep="" style="position: relative; width: 78px; height: 78px; border-radius: 50%; background: {{ s.bg }}; border: 2px solid #1B3A6B; display: flex; align-items: center; justify-content: center; transition: transform .25s;" style-hover="transform:scale(1.08)">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="{{ s.fg }}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="{{ s.d }}"></path></svg>
+              </span>
+              <span style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 10px; padding-top: 40px;">
+                <span aria-hidden="true" style="position: absolute; left: 50%; top: -2px; transform: translateX(-50%); font-size: 52px; font-weight: 900; line-height: 1; letter-spacing: -.02em; color: rgba(236,138,115,.24); pointer-events: none; user-select: none;">{{ s.no }}</span>
+                <span style="position: relative; font-size: 16px; font-weight: 700; line-height: 1.5; letter-spacing: .04em; color: #1B3A6B;">{{ s.label }}</span>
+                <span style="position: relative; font-size: 14px; font-weight: 500; line-height: 1.7; color: #1B3A6B; text-wrap: pretty;">{{ s.desc }}</span>
+              </span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <div data-fwrap="" data-fmob="" style="position: relative; max-width: 420px; margin: 56px auto 0; display: flex; flex-direction: column; gap: 46px;">
+        <span data-fline="" style="position: absolute; left: 36px; top: 36px; bottom: 36px; width: 3px; background: rgba(27,58,107,.15); border-radius: 2px; overflow: hidden;"><span style="position: absolute; inset: 0; background: #1B3A6B; transform-origin: top; transform: scaleY(0);"></span></span>
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="6">
+          <div data-reveal="up" style="position: relative; display: flex; align-items: center; gap: 20px;">
+            <span data-fstep="" style="flex: 0 0 74px; height: 74px; border-radius: 50%; background: {{ s.bg }}; border: 2px solid #1B3A6B; display: flex; align-items: center; justify-content: center;">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="{{ s.fg }}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="{{ s.d }}"></path></svg>
+            </span>
+            <span style="position: relative; display: flex; flex-direction: column; gap: 2px; padding-left: 4px;">
+              <span aria-hidden="true" style="position: absolute; left: -6px; top: 50%; transform: translateY(-50%); font-size: 44px; font-weight: 900; line-height: 1; color: rgba(236,138,115,.24); pointer-events: none; user-select: none;">{{ s.no }}</span>
+              <span style="position: relative; font-size: 17px; font-weight: 700; letter-spacing: .04em; color: #1B3A6B;">{{ s.label }}</span>
+              <span style="position: relative; font-size: 15px; font-weight: 500; line-height: 1.7; color: #1B3A6B;">{{ s.desc }}</span>
+            </span>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+  </section>
+
+  <section id="contact" data-sec="" style="position: relative; z-index: 6; padding: 150px 24px 110px;">
+    <div data-reveal="up" style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <svg viewBox="0 0 24 24" style="width: 44px; fill: #1B3A6B;"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"></path></svg>
+      <div data-sechead="" style="position: relative; width: 100%; min-height: 340px; padding-top: 104px; display: flex; flex-direction: column; align-items: center;">
+        <img src="assets/grid-blue.webp" alt="" style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: min(620px, 100%); opacity: .42; pointer-events: none;" />
+        <h2 style="position: relative; font-size: 30px; font-weight: 700; line-height: 1.6; letter-spacing: .04em; margin: 0;">讓你的專業，<br />成為吸引對的人的引力。</h2>
+      </div>
+      <span data-reveal="up" style="margin-top: 32px; display: inline-flex;">
+        <span style="display: inline-flex; animation: gf-pulse 2.4s ease-in-out infinite;">
+          <a href="https://line.me/R/ti/p/@173lrrhc" target="_blank" rel="noopener" style="background: #EC8A73; color: #fff; font-size: 19px; font-weight: 600; letter-spacing: .06em; padding: 12px 32px; box-shadow: 6px 6px 0 #10264A; transition: transform .3s cubic-bezier(.2,.8,.2,1);" style-hover="color:#fff;transform:scale(1.12)">預約線上諮詢 →</a>
+        </span>
+      </span>
+    </div>
+  </section>
+
+  <footer style="position: relative; z-index: 6; background: #D4D6DA; padding: 30px 24px 20px;">
+    <div style="max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 20px;">
+      <div data-foot-row="" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); align-items: center; gap: 16px;">
+        <a href="index.html" style="display: flex; align-items: center; gap: 10px; justify-self: start;">
+          <img src="assets/badge-navy-cut.webp" alt="引力流域" style="width: 44px; height: auto;" />
+          <img src="assets/wordmark-navy.webp" alt="引力流域 GraviFlow Design" style="height: 24px; width: auto;" />
+        </a>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 14px;">
+          <a href="https://www.instagram.com/graviflow/" target="_blank" rel="noopener" aria-label="Instagram @graviflow" style="width: 40px; height: 40px; border-radius: 11px; background: radial-gradient(circle at 30% 107%, #FDF497 0%, #FDF497 5%, #FD5949 45%, #D6249F 60%, #285AEB 90%); display: flex; align-items: center; justify-content: center; color: #fff; transition: transform .2s;" style-hover="color:#fff;transform:scale(1.1)">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+          </a>
+          <a href="https://www.threads.net/@graviflow" target="_blank" rel="noopener" aria-label="Threads @graviflow" style="width: 40px; height: 40px; border-radius: 11px; background: #000; display: flex; align-items: center; justify-content: center; color: #fff; transition: transform .2s;" style-hover="color:#fff;transform:scale(1.1)">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M16.2 11.3c-.3-2.6-1.9-3.9-4.1-3.9-1.6 0-2.9.7-3.6 2"></path><path d="M16.3 11.2c-3.3-.8-6.6.1-6.4 2.4.2 2 3.4 2.4 4.9.9 1.200-1.2 1.4-3.2 1.3-4.6"></path><path d="M19.5 8.2C18.4 4.9 15.7 3 12 3 6.9 3 4 6.6 4 12s2.9 9 8 9c3.4 0 6-1.6 6.9-4.2.8-2.4-.4-4.6-2.6-5.6"></path></svg>
+          </a>
+        </div>
+        <span></span>
+      </div>
+      <div style="border-top: 1px solid #B9BCC2; padding-top: 14px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+        <span style="color: #33476A; font-size: 14px; letter-spacing: .06em;">© 2026 引力流域 GraviFlow Design</span>
+        <div style="display: flex; align-items: center; gap: 24px;">
+          <a href="privacy.html" style="color: #33476A; font-size: 14px; letter-spacing: .06em;" style-hover="color:#EC8A73">隱私權政策</a>
+          <a href="refund.html" style="color: #33476A; font-size: 14px; letter-spacing: .06em;" style-hover="color:#EC8A73">退換貨政策</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;starCount&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:150,&quot;min&quot;:40,&quot;max&quot;:320,&quot;step&quot;:10,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;星星&quot;}}">
+class Component extends DCLogic {
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1280, menuOpen: false, loading: true, loaderFade: false };
+
+  componentDidMount() {
+    this.initDeclutter();
+    this.onProg = () => { const p = document.querySelector('[data-prog]'); if (!p) return; const max = document.documentElement.scrollHeight - window.innerHeight; p.style.transform = `scaleX(${max > 0 ? Math.min(1, Math.max(0, (window.scrollY || 0) / max)) : 0})`; };
+    window.addEventListener('scroll', this.onProg, { passive: true }); window.addEventListener('resize', this.onProg); setTimeout(this.onProg, 120);
+    this.onResize = () => this.setState({ w: window.innerWidth, menuOpen: window.innerWidth < 960 ? this.state.menuOpen : false });
+    this.onScroll = () => { this.checkReveal(); this.updateTl(); this.updateFlow(); };
+    window.addEventListener('resize', this.onResize);
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    document.addEventListener('scroll', this.onScroll, { passive: true, capture: true });
+    requestAnimationFrame(() => this.updateTl());
+    this.ready = true;
+    document.documentElement.lang = 'zh-Hant-TW';
+    this.prepHero();
+    const t0 = Date.now();
+    const finish = () => {
+      if (this.finished) return; this.finished = true;
+      setTimeout(() => {
+        this.setState({ loaderFade: true });
+        setTimeout(() => { this.setState({ loading: false }); this.checkReveal(); this.playHero(); }, 700);
+      }, Math.max(0, 1100 - (Date.now() - t0)));
+    };
+    if (document.readyState === 'complete') finish(); else window.addEventListener('load', finish, { once: true });
+    setTimeout(finish, 5000);
+    setTimeout(() => { this.scanReveal(); this.onScroll(); }, 60);
+    this.tick = setInterval(() => this.checkReveal(), 400);
+  }
+  componentDidUpdate() { this.scanReveal(); this.checkReveal(); this.updateFlow(); }
+  updateFlow() {
+    const vh = window.innerHeight, cl = v => Math.min(1, Math.max(0, v));
+    document.querySelectorAll('[data-fwrap]').forEach(w => {
+      const r = w.getBoundingClientRect(); if (!r.height) return;
+      const cs = [...w.querySelectorAll('[data-fstep]')], fill = w.querySelector('[data-fline] > span'); if (!cs.length) return;
+      const on = (c, v) => { const s = v ? '1' : '0'; if (c.dataset.on !== s) c.dataset.on = s; };
+      if (w.hasAttribute('data-fmob')) {
+        const mark = vh * .6, ctr = c => { const q = c.getBoundingClientRect(); return q.top + q.height / 2; };
+        const c0 = ctr(cs[0]), c1 = ctr(cs[cs.length - 1]);
+        cs.forEach(c => on(c, ctr(c) <= mark));
+        if (fill) fill.style.transform = `scaleY(${cl((mark - c0) / Math.max(1, c1 - c0)).toFixed(4)})`;
+      } else {
+        const p = cl((vh * .85 - r.top) / (vh * .55));
+        cs.forEach((c, i) => on(c, p > .02 && p >= i / Math.max(1, cs.length - 1) - .005));
+        if (fill) fill.style.transform = `scaleX(${p.toFixed(4)})`;
+      }
+    });
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('scroll', this.onScroll);
+    document.removeEventListener('scroll', this.onScroll, true);
+    clearInterval(this.tick);
+  }
+  prepHero() {
+    document.querySelectorAll('[data-ch], [data-seq]').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = el.hasAttribute('data-ch') ? 'translateY(.35em)' : 'translateY(20px)';
+    });
+  }
+  playHero() {
+    if (this.heroPlayed) return; this.heroPlayed = true;
+    const p = document.querySelector('[data-seq="p"]');
+    if (p) { p.style.transition = 'opacity .8s ease, transform .8s cubic-bezier(.2,.75,.2,1)'; p.style.opacity = '1'; p.style.transform = 'none'; }
+    const step = 85;
+    document.querySelectorAll('[data-ch]').forEach((el, i) => {
+      const d = 300 + i * step;
+      el.style.transition = `opacity .5s ease ${d}ms, transform .5s cubic-bezier(.2,.75,.2,1) ${d}ms`;
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+  updateTl() {
+    const vh = window.innerHeight;
+    const dw = document.querySelector('[data-drift]'), de = document.querySelector('[data-drift-el]');
+    if (dw && de && window.innerWidth < 960) de.style.transform = '';
+    if (dw && de && window.innerWidth >= 960) {
+      const r = dw.getBoundingClientRect();
+      const p = Math.min(1, Math.max(0, (vh * 0.95 - r.top) / (vh * 0.75)));
+      const e = p * p * (3 - 2 * p);
+      const w = window.innerWidth, mob = w < 960;
+      const dx = mob ? -w * 0.08 : -Math.min(w * 0.2, 260), dy = mob ? 300 : 430;
+      const arc = (mob ? 90 : 150) * 4 * e * (1 - e);
+      de.style.transform = `translate(${(dx * e).toFixed(1)}px, ${(dy * e - arc).toFixed(1)}px) rotate(${(28 * e + 6 * Math.sin(Math.PI * e)).toFixed(1)}deg)`;
+    }
+    document.querySelectorAll('[data-tlh]').forEach(el => {
+      const r = el.getBoundingClientRect();
+      const p = Math.min(1, Math.max(0, (vh * 0.85 - r.top) / (vh * 0.4)));
+      if (el.firstChild) el.firstChild.style.transform = `scaleX(${p})`;
+    });
+  }
+  checkReveal() {
+    if (this.state.loading) return;
+    const vh = window.innerHeight;
+    document.querySelectorAll('[data-flowline]:not([data-fl])').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < vh * 0.9 && r.bottom > 0 && el.firstChild) {
+        el.setAttribute('data-fl', '1');
+        el.firstChild.style.transition = 'transform 2.4s linear .2s';
+        el.firstChild.style.transform = 'scaleX(1)';
+      }
+    });
+    document.querySelectorAll('[data-rv="1"]').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < vh * 0.9 && r.bottom > 0) {
+        el.setAttribute('data-rv', '2');
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      }
+    });
+  }
+  scanReveal() {
+    if (!this.ready) return;
+    const init = { up: 'translateY(36px)', zoom: 'scale(.55)' };
+    document.querySelectorAll('[data-reveal]:not([data-rv])').forEach(el => {
+      el.setAttribute('data-rv', '1');
+      const type = el.getAttribute('data-reveal') || 'up';
+      const d = parseInt(el.getAttribute('data-delay') || '0', 10);
+      const dur = type === 'zoom' ? 1.1 : .9;
+      el.style.opacity = '0';
+      el.style.transform = init[type] || init.up;
+      el.style.transition = `opacity ${dur}s ease ${d}ms, transform ${dur}s cubic-bezier(.2,.75,.2,1) ${d}ms`;
+    });
+  }
+  initDeclutter() {
+    const run = () => { try { this.declutterStars(); } catch (e) {} };
+    let t = 0;
+    this._declRun = () => { clearTimeout(t); t = setTimeout(run, 280); };
+    window.addEventListener('resize', this._declRun);
+    window.addEventListener('load', () => { setTimeout(run, 600); setTimeout(run, 2600); }, { once: true });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => setTimeout(run, 400));
+    setTimeout(run, 1800); setTimeout(run, 4200);
+  }
+
+  declutterStars() {
+    const isStarEl = c => c.style && /gf-tw/.test(c.style.animation || '');
+    const layers = [...document.querySelectorAll('div[aria-hidden="true"]')].filter(d => d.children.length >= 12 && [...d.children].every(isStarEl));
+    if (!layers.length) return;
+    const neu = document.createElement('style');
+    neu.textContent = '[data-reveal],[data-reveal] *{transition:none !important}[data-reveal]{transform:none !important}';
+    document.head.appendChild(neu);
+    try { this._declCore(layers); } finally {
+      const ts = document.createElement('style'); ts.textContent = '[data-reveal],[data-reveal] *{transition:none !important}';
+      document.head.appendChild(ts); neu.remove(); void document.body.offsetHeight;
+      requestAnimationFrame(() => requestAnimationFrame(() => ts.remove()));
+    }
+  }
+
+  _declCore(layers) {
+    const sx = window.scrollX, sy = window.scrollY, CELL = 120;
+    const grid = new Map();
+    const add = (r, kind) => {
+      for (let gx = Math.floor(r.l / CELL); gx <= Math.floor(r.r / CELL); gx++)
+        for (let gy = Math.floor(r.t / CELL); gy <= Math.floor(r.b / CELL); gy++) {
+          const k = gx + ',' + gy; if (!grid.has(k)) grid.set(k, []); grid.get(k).push(r);
+        }
+      r.kind = kind;
+    };
+    const hits = (b, ignoreBoxes) => {
+      const seen = new Set();
+      for (let gx = Math.floor(b.l / CELL); gx <= Math.floor(b.r / CELL); gx++)
+        for (let gy = Math.floor(b.t / CELL); gy <= Math.floor(b.b / CELL); gy++) {
+          const a = grid.get(gx + ',' + gy); if (!a) continue;
+          for (const r of a) {
+            if (seen.has(r)) continue; seen.add(r);
+            if (ignoreBoxes && r.kind === 'box') continue;
+            if (r.kind === 'star') {
+              const dx = r.cx - b.cx, dy = r.cy - b.cy, need = r.rad + b.rad + (r.big && b.big ? 46 : r.big || b.big ? 30 : 16);
+              if (dx * dx + dy * dy < need * need) return true;
+            } else if (b.l < r.r && b.r > r.l && b.t < r.b && b.b > r.t) return true;
+          }
+        }
+      return false;
+    };
+    // text lines
+    const vis = el => { for (let e = el; e && e !== document.body; e = e.parentElement) { const cs = getComputedStyle(e); if (cs.display === 'none' || cs.visibility === 'hidden') return false; } return true; };
+    const tw = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, { acceptNode: n => n.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT });
+    const range = document.createRange(); const P = 7; let n;
+    const visCache = new Map();
+    while ((n = tw.nextNode())) {
+      const pe = n.parentElement; if (!pe || pe.closest('script,style,[aria-hidden="true"] svg')) continue;
+      if (!visCache.has(pe)) visCache.set(pe, vis(pe)); if (!visCache.get(pe)) continue;
+      range.selectNodeContents(n);
+      for (const q of range.getClientRects()) if (q.width > 0 && q.height > 0) add({ l: q.left + sx - P, r: q.right + sx + P, t: q.top + sy - P, b: q.bottom + sy + P }, 'text');
+    }
+    // solid boxes: cards, quotes, media, buttons
+    document.querySelectorAll('article, blockquote, video, [data-cc], [data-astro-box], a[href] , button, img, svg').forEach(el => {
+      if (el.matches('svg') && (el.closest('[aria-hidden="true"]') && el.parentElement && /gf-tw/.test(el.style.animation || '') || el.closest('a,button'))) return;
+      if (el.matches('img') && (el.closest('[aria-hidden="true"]') || el.getAttribute('data-reveal') === 'grid' || /grid-/.test(el.getAttribute('src') || ''))) return;
+      const q = el.getBoundingClientRect(); if (q.width < 30 || q.height < 20 || !vis(el)) return;
+      add({ l: q.left + sx - 4, r: q.right + sx + 4, t: q.top + sy - 4, b: q.bottom + sy + 4 }, 'box');
+    });
+    const ang = []; for (let i = 0; i < 16; i++) ang.push(i * Math.PI / 8);
+    for (const L of layers) {
+      const lr = L.getBoundingClientRect(), LW = lr.width, LH = lr.height; if (!LW || !LH) continue;
+      const hero = !!L.closest('#home, [data-hero]') && getComputedStyle(L).zIndex === '1';
+      for (const s of L.children) {
+        if (!s.dataset.ot) { s.dataset.ot = s.style.top; s.dataset.ol = s.style.left; }
+        s.style.top = s.dataset.ot; s.style.left = s.dataset.ol; s.style.visibility = '';
+        const w = parseFloat(s.style.width) || 4;
+        const x0 = parseFloat(s.dataset.ol) / 100 * LW, y0 = parseFloat(s.dataset.ot) / 100 * LH;
+        const rad = w / 2, big = w >= 9;
+        let placed = null;
+        for (let ri = 0; ri <= 14 && !placed; ri++) {
+          const R = ri * 14;
+          for (const a of (ri ? ang : [0])) {
+            const x = x0 + Math.cos(a) * R, y = y0 + Math.sin(a) * R;
+            if (x < 2 || x > LW - w - 2 || y < 2 || y > LH - w - 2) continue;
+            const cx = lr.left + sx + x + rad, cy = lr.top + sy + y + rad;
+            const b = { l: cx - rad, r: cx + rad, t: cy - rad, b: cy + rad, cx, cy, rad, big };
+            if (!hits(b, hero)) { placed = { x, y, b }; break; }
+          }
+        }
+        if (!placed) { s.style.visibility = 'hidden'; continue; }
+        if (placed.x !== x0 || placed.y !== y0) { s.style.left = (placed.x / LW * 100).toFixed(3) + '%'; s.style.top = (placed.y / LH * 100).toFixed(3) + '%'; }
+        add(placed.b, 'star');
+      }
+    }
+  }
+
+  buildHeroStars() {
+    let seed = 991;
+    const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+    const h = React.createElement;
+    const path = 'M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z';
+    const kids = [];
+    for (let i = 0; i < 40; i++) {
+      const top = 18 + rnd() * 70, left = rnd() * 100;
+      const color = rnd() < 0.35 ? '#EC8A73' : '#FFFFFF';
+      const isStar = rnd() < 0.12;
+      const size = isStar ? 9 + rnd() * 7 : 2 + rnd() * 4;
+      const style = { position: 'absolute', top: top + '%', left: left + '%', width: size, height: size,
+        animation: `gf-tw ${(3.5 + rnd() * 4.5).toFixed(2)}s ease-in-out ${(-rnd() * 8).toFixed(2)}s infinite` };
+      kids.push(isStar
+        ? h('svg', { key: i, viewBox: '0 0 24 24', style: { ...style, fill: color } }, h('path', { d: path }))
+        : h('span', { key: i, style: { ...style, borderRadius: '50%', background: color } }));
+    }
+    return h('div', { 'aria-hidden': true, style: { position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none' } }, kids);
+  }
+  buildStars() {
+    const count = this.props.starCount ?? 150;
+    let seed = 20261004;
+    const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+    const h = React.createElement;
+    const path = 'M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z';
+    const kids = [];
+    for (let i = 0; i < count; i++) {
+      const top = rnd() * 100;
+      const side = rnd() < 0.72;
+      const left = side ? (rnd() < 0.5 ? rnd() * 17 : 83 + rnd() * 16) : rnd() * 100;
+      const dark = top < 12;
+      const orange = rnd() < 0.55;
+      const color = orange ? '#EC8A73' : (dark ? '#FFFFFF' : '#2D5FA8');
+      const isStar = rnd() < 0.5;
+      const size = isStar ? (side ? 14 + rnd() * 22 : 10 + rnd() * 10) : (3 + rnd() * (side ? 9 : 5));
+      const style = {
+        position: 'absolute', top: top + '%', left: left + '%', width: size, height: size,
+        animation: `gf-tw ${(1.4 + rnd() * 4.6).toFixed(2)}s ease-in-out ${(-rnd() * 6).toFixed(2)}s infinite`, willChange: 'opacity, transform'
+      };
+      kids.push(isStar
+        ? h('svg', { key: i, viewBox: '0 0 24 24', style: { ...style, fill: color } }, h('path', { d: path }))
+        : h('span', { key: i, style: { ...style, borderRadius: '50%', background: color } }));
+    }
+    return h('div', { 'aria-hidden': true, style: { position: 'absolute', inset: 0, zIndex: 5, pointerEvents: 'none', overflow: 'hidden' } }, kids);
+  }
+  renderVals() {
+    if (!this.stars || this._sc !== this.props.starCount) { this._sc = this.props.starCount; this.stars = this.buildStars(); }
+    if (!this.heroStars) this.heroStars = this.buildHeroStars();
+    const mobile = this.state.w < 960, mo = mobile && this.state.menuOpen;
+    const values = [
+      { no: '01', title: '先看懂你的品牌，再開始設計', paras: [
+        { a: '網站不是把資料整理漂亮就好。', b: '', c: '' },
+        { a: '從競爭品牌、你的特色到目標客群，我們會先找出', b: '你為什麼值得被選擇', c: '，再把定位轉化成網站架構、文案與視覺。' },
+        { a: '讓每一個設計決定，都有它存在的理由。', b: '', c: '' }] },
+      { no: '02', title: '讓網站從搜尋開始累積', paras: [
+        { a: '網站不只為今天的訪客而做，也替未來的搜尋曝光留下空間。', b: '', c: '' },
+        { a: '從網站結構與基礎設定做好搜尋引擎友善的底子，讓你的內容有機會持續被找到。', b: '', c: '' }] },
+      { no: '03', title: '讓轉換，也可以很好看', paras: [
+        { a: '銷售頁不一定要長得像銷售頁。', b: '', c: '' },
+        { a: '我們擅長運用插畫、特色圖片與小動效，讓原本理性的資訊與銷售流程，也能保有品牌個性與視覺魅力。', b: '', c: '' }] },
+      { no: '04', title: '讓每一次曝光，都值得被追蹤', paras: [
+        { a: '網站上線不是終點，而是開始累積真實數據。', b: '', c: '' },
+        { a: '透過訪客行為與轉換數據，找出哪些內容真正有效，讓後續的網站與獲客布局越做越精準。', b: '', c: '' }] }
+    ];
+    if (!this.panelStars) {
+      let seed = 4242; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+      const h = React.createElement, kids = [];
+      for (let i = 0; i < 28; i++) {
+        const s = 2 + rnd() * 3;
+        kids.push(h('span', { key: i, style: { position: 'absolute', top: rnd() * 100 + '%', left: rnd() * 100 + '%', width: s, height: s, borderRadius: '50%', background: rnd() < 0.35 ? '#EC8A73' : '#fff', animation: `gf-tw ${(3.5 + rnd() * 4).toFixed(2)}s ease-in-out ${(-rnd() * 7).toFixed(2)}s infinite` } }));
+      }
+      this.panelStars = h('div', { 'aria-hidden': true, style: { position: 'absolute', inset: 0, pointerEvents: 'none' } }, kids);
+    }
+    const steps = [
+      ['免費初步諮詢', '了解品牌現況、服務內容、目標客群與網站需求。', 'M4 5h16v11H9l-5 4z M8 10h8 M8 13h5'],
+      ['需求與方案確認', '確認網站目的、頁面範圍、功能需求、時程與報價。', 'M6 3h9l4 4v14H6z M15 3v4h4 M9 11h6 M9 15h6 M9 7h3'],
+      ['內容與素材整理', '整理品牌資料、服務內容、圖片與現有行銷素材。', 'M3 6h7l2 2h9v11H3z M8 13h8 M8 16h5'],
+      ['網站策略與架構', '規劃資訊層級、頁面內容與使用者行動路徑。', 'M9 3h6v5H9z M3 16h6v5H3z M15 16h6v5h-6z M12 8v4 M6 16v-4h12v4'],
+      ['視覺設計與網站製作', '建立品牌視覺並完成桌機、平板與手機版網站。', 'M3 4h18v12H3z M8 20h8 M12 16v4 M7 12l3-3.5 2.5 2.5L17 7'],
+      ['測試、上線與交接', '完成網站測試、正式上線，並提供基本操作說明。', 'M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z M8.5 12l2.5 2.5 4.5-5']
+    ];
+    const last = steps.length - 1;
+    return {
+      panelStars: this.panelStars,
+      steps: steps.map(([label, desc, d], i) => ({ label, desc, d, no: String(i + 1).padStart(2, '0'), delay: String(i * 480), bg: '#E4E4E4', fg: '#1B3A6B' })),
+      flowDir: mobile ? 'column' : 'row',
+      connFlex: mobile ? '0 0 auto' : '1 1 0',
+      connW: mobile ? '20px' : 'auto',
+      connH: mobile ? '64px' : '150px',
+      connAlign: mobile ? 'center' : 'flex-start',
+      lineW: mobile ? '3px' : 'calc(100% - 16px)',
+      lineH: mobile ? '100%' : '3px',
+      dashBg: mobile ? 'repeating-linear-gradient(180deg, #EC8A73 0 10px, transparent 10px 18px)' : 'repeating-linear-gradient(90deg, #EC8A73 0 10px, transparent 10px 18px)',
+      dashSize: mobile ? '3px 18px' : '18px 3px',
+      dashAnim: mobile ? 'gf-dashv .9s linear infinite' : 'gf-dash .9s linear infinite',
+      arL: mobile ? 'calc(50% - 7px)' : 'auto', arR: mobile ? 'auto' : '0', arT: mobile ? 'auto' : '68px', arB: mobile ? '-6px' : 'auto',
+      arrowRot: mobile ? 'rotate(90deg)' : 'none',
+      starField: this.stars,
+      heroStars: this.heroStars,
+      h1a: [...'讓專業產生引力，'],
+      h1b: [...'讓對的人靠近。'],
+      values: values.map((v, i) => ({ ...v, delay: String(i * 320) })),
+      loading: this.state.loading,
+      loaderOpacity: this.state.loaderFade ? 0 : 1,
+      isDesktop: !mobile, isMobile: mobile, showMenu: mo, menuOpen: mo,
+      bar1: mo ? 'translateY(8px) rotate(45deg)' : 'none',
+      bar2: mo ? 0 : 1,
+      bar3: mo ? 'translateY(-8px) rotate(-45deg)' : 'none',
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

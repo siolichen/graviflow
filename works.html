@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>window.__resources = {};</script>
+<script src="vendor/react.production.min.js"></script>
+<script src="vendor/react-dom.production.min.js"></script>
+<script src="support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet">
+<title>作品集｜引力流域設計 GraviFlow Design</title>
+<meta name="description" content="引力流域設計的網站作品集：一頁式銷售頁與多頁式品牌形象網站，看每個網站如何從客戶的真實問題出發，讓專業被看見、被理解、被選擇。">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.graviflowdesign.com/works">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="引力流域設計 GraviFlow Design">
+<meta property="og:title" content="作品集｜引力流域設計 GraviFlow Design">
+<meta property="og:description" content="一頁式銷售頁與多頁式品牌形象網站作品，從客戶的真實問題出發。">
+<meta property="og:url" content="https://www.graviflowdesign.com/works">
+<meta property="og:image" content="https://www.graviflowdesign.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1B3A6B">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<style>
+  html, body { margin: 0; padding: 0; background: #E4E4E4; }
+  * { box-sizing: border-box; }
+  a { color: #1B3A6B; text-decoration: none; white-space: nowrap; }
+  a:hover { color: #EC8A73; }
+  ::selection { background: #EC8A73; color: #fff; }
+  body { overflow-x: clip; }
+  @keyframes gf-drift-diag { from { transform: translate(14px, -14px) rotate(-3deg); } to { transform: translate(-14px, 14px) rotate(1deg); } }
+  @keyframes gf-float { 0%,100% { transform: translate(-16px, -16px) rotate(-2deg); } 50% { transform: translate(16px, 16px) rotate(2deg); } }
+  @keyframes gf-tw { 0%,100% { opacity: .15; transform: scale(.6); } 50% { opacity: 1; transform: scale(1.1); } }
+  @keyframes gf-astro-drift { 0%,100% { transform: translate(0, 0) rotate(0deg); } 50% { transform: translate(-3.6%, -3.6%) rotate(-3deg); } }
+  @keyframes gf-load { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }
+  @keyframes gf-bob { 0%,100% { transform: translateY(-6px); } 50% { transform: translateY(6px); } }
+  @keyframes gf-pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+  @keyframes gf-open { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+  [data-work-card]:hover img { transform: scale(1.04); }
+  [data-dev-track]:hover [data-dev-bar] { background: #1B3A6B; }
+  [data-dev-screen]:hover [data-play-ov], [data-dev-screen]:hover [data-dev-ctl], [data-play-ov]:focus-visible { opacity: 1 !important; }
+  [data-detail] { animation: gf-open .55s cubic-bezier(.2,.75,.2,1); }
+  @media (prefers-reduced-motion: reduce) { [data-detail] { animation: none; } }
+  @media (max-width: 959px) {
+    [data-foot-row] { display: flex !important; justify-content: space-between; align-items: center; gap: 12px; }
+    [data-foot-row] > span:last-child:empty { display: none; }
+    [data-foot-row] > div { justify-content: flex-end !important; gap: 10px !important; }
+  }
+</style>
+</helmet>
+
+<div style="position: relative; font-family: 'Noto Serif TC', serif; font-weight: 500; color: #1B3A6B; background: #E4E4E4; overflow-x: clip;">
+  {{ starField }}
+  <sc-if value="{{ loading }}" hint-placeholder-val="{{ true }}">
+    <div aria-hidden="true" style="position: fixed; inset: 0; z-index: 300; background: #E4E4E4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; transition: opacity .7s ease; opacity: {{ loaderOpacity }};">
+      <span style="position: relative; display: block; width: 180px;"><img src="assets/loader-badge-bg.webp" alt="" style="width: 100%; height: auto; display: block;"><img src="assets/loader-astro.webp" alt="" style="position: absolute; left: 0; top: 0; width: 100%; height: auto; display: block; transform-origin: 54% 50%; animation: gf-astro-drift 3.6s ease-in-out infinite;"></span>
+      <img src="assets/wordmark-navy.webp" alt="" style="height: 46px; width: auto;">
+      <span style="position: relative; width: 140px; height: 2px; background: rgba(27,58,107,.15); overflow: hidden;"><span style="position: absolute; left: 0; top: 0; width: 40%; height: 100%; background: #EC8A73; animation: gf-load 1.2s ease-in-out infinite;"></span></span>
+    </div>
+  </sc-if>
+
+  <header style="position: sticky; top: 0; z-index: 60; background: rgba(228,228,228,.7); backdrop-filter: blur(10px); border-bottom: 1px solid #C2C4C8;">
+    <div style="max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 28px;">
+      <a href="index.html" style="display: flex; align-items: center; gap: 12px; flex-shrink: 0;">
+        <img src="assets/badge-navy-cut.webp" alt="引力流域" style="width: 56px; height: auto;">
+        <img src="assets/wordmark-navy.webp" alt="引力流域 GraviFlow Design" style="height: 30px; width: auto;">
+      </a>
+      <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+        <nav style="display: flex; align-items: center; gap: 32px; height: 100%;">
+          <a href="about.html" style="height: 100%; display: flex; align-items: center; padding: 4px 4px 0; border-bottom: 4px solid transparent; font-size: 17px; letter-spacing: .06em; color: #1B3A6B; transition: border-color .25s;" style-hover="border-bottom-color:#1B3A6B;color:#1B3A6B">關於我們</a>
+          <a href="#top" aria-current="page" style="height: 100%; display: flex; align-items: center; padding: 4px 4px 0; border-bottom: 4px solid #1B3A6B; font-size: 17px; letter-spacing: .06em; color: #1B3A6B;">作品集</a>
+          <a href="#contact" style="background: #1B3A6B; color: #fff; font-size: 17px; letter-spacing: .06em; padding: 12px 26px;" style-hover="background:#EC8A73;color:#fff">免費線上諮詢</a>
+        </nav>
+      </sc-if>
+      <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+        <button type="button" onClick="{{ toggleMenu }}" aria-label="選單" aria-expanded="{{ menuOpen }}" style="all: unset; cursor: pointer; width: 48px; height: 48px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;">
+          <span style="width: 26px; height: 2px; background: #1B3A6B; transition: transform .3s; transform: {{ bar1 }};"></span>
+          <span style="width: 26px; height: 2px; background: #1B3A6B; transition: opacity .3s; opacity: {{ bar2 }};"></span>
+          <span style="width: 26px; height: 2px; background: #1B3A6B; transition: transform .3s; transform: {{ bar3 }};"></span>
+        </button>
+      </sc-if>
+    </div>
+    <sc-if value="{{ showMenu }}" hint-placeholder-val="{{ false }}">
+      <nav style="border-top: 1px solid #C2C4C8; padding: 12px 24px 28px; display: flex; flex-direction: column; align-items: stretch;">
+        <a href="about.html" onClick="{{ closeMenu }}" style="font-size: 18px; letter-spacing: .06em; color: #1B3A6B; padding: 16px 4px; border-bottom: 1px solid #D2D4D8;">關於我們</a>
+        <a href="#top" onClick="{{ closeMenu }}" style="font-size: 18px; letter-spacing: .06em; color: #1B3A6B; padding: 16px 4px; border-bottom: 1px solid #D2D4D8;">作品集</a>
+        <a href="#contact" onClick="{{ closeMenu }}" style="margin-top: 20px; background: #1B3A6B; color: #fff; font-size: 17px; letter-spacing: .06em; padding: 14px 26px; text-align: center;">免費線上諮詢</a>
+      </nav>
+    </sc-if>
+    <span aria-hidden="true" style="position: absolute; left: 0; bottom: -1px; width: 100%; height: 3px; overflow: hidden; pointer-events: none;"><span data-prog="" style="display: block; height: 100%; background: #1B3A6B; transform-origin: left; transform: scaleX(0);"></span></span>
+  </header>
+
+  <section id="top" style="position: relative; overflow: hidden; background: linear-gradient(180deg, #E4E4E4 0%, #8A9CB8 10%, #2A4877 22%, #1B3A6B 32%, #1B3A6B 72%, #8396B3 90%, #E4E4E4 100%); padding: 140px 24px 150px;">
+    {{ heroStars }}
+    <div aria-hidden="true" style="position: absolute; z-index: 5; left: {{ heroAstroL }}; top: {{ heroAstroT }}; width: {{ heroAstroW }}; display: {{ heroAstroDisp }}; pointer-events: none;">
+      <div style="animation: gf-drift-diag 4.8s ease-in-out infinite alternate;"><img src="assets/astro-navy.webp" alt="" style="width: 100%; height: auto; display: block; transform: scaleX(-1) rotate(-22deg);"></div>
+    </div>
+    <div style="position: relative; z-index: 6; max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px;">
+      <p data-seq="p" style="font-size: 16px; letter-spacing: .3em; color: #EC8A73; margin: 0;">PORTFOLIO</p>
+      <h1 aria-label="作品集" style="font-size: 40px; font-weight: 700; line-height: 1.5; letter-spacing: .1em; color: #fff; margin: 0;"><span aria-hidden="true" style="display: inline-block;"><sc-for list="{{ h1 }}" as="ch" hint-placeholder-count="3"><span data-ch="" style="display: inline-block;">{{ ch }}</span></sc-for></span></h1>
+    </div>
+  </section>
+
+  <section id="works" style="position: relative; z-index: 6; padding: 24px 24px 0;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <div role="tablist" aria-label="作品分類" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 64px;">
+        <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
+          <button type="button" role="tab" aria-selected="{{ t.sel }}" onClick="{{ t.pick }}" style="all: unset; cursor: pointer; padding: 10px 22px; font-size: 16px; letter-spacing: .06em; border: 2px solid #1B3A6B; background: {{ t.bg }}; color: {{ t.fg }}; transition: background .25s, color .25s;">{{ t.label }}</button>
+        </sc-for>
+      </div>
+
+      <sc-for list="{{ groups }}" as="g" hint-placeholder-count="2">
+        <div style="margin-bottom: 110px;">
+          <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px; flex-wrap: wrap;">
+            <svg viewBox="0 0 24 24" style="width: 26px; fill: #EC8A73; flex-shrink: 0;"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"></path></svg>
+            <h2 style="font-size: 26px; font-weight: 700; letter-spacing: .06em; margin: 0;">{{ g.title }}</h2>
+            <span style="font-size: 13px; letter-spacing: .24em; color: #EC8A73;">{{ g.en }}</span>
+            <span style="flex: 1 1 60px; height: 1px; background: #B9BCC2;"></span>
+          </div>
+          <div data-car="{{ g.key }}" onScroll="{{ g.onCar }}" style="display: {{ gDisp }}; grid-template-columns: {{ cols }}; gap: {{ gGap }}; overflow-x: {{ gOver }}; scroll-snap-type: {{ gSnap }}; padding: {{ gPad }}; margin: {{ gMargin }}; scrollbar-width: none;">
+            <sc-for list="{{ g.cells }}" as="c" hint-placeholder-count="2">
+              <sc-if value="{{ c.isCard }}" hint-placeholder-val="{{ true }}">
+                <article data-work-card="" id="{{ c.cardId }}" style="flex: {{ cardFlex }}; scroll-snap-align: center; display: flex; flex-direction: column; background: #EDEDED; border: 2px solid #1B3A6B; box-shadow: {{ c.shadow }}; transform: {{ c.lift }}; transition: box-shadow .35s, transform .35s;" style-hover="transform:translateY(-4px)">
+                  <button type="button" onClick="{{ c.toggle }}" aria-expanded="{{ c.open }}" aria-controls="work-detail" style="all: unset; cursor: pointer; display: flex; flex-direction: column; flex: 1;">
+                    <span style="display: block; aspect-ratio: 16 / 9; overflow: hidden; background: #fff;"><img src="{{ c.hero }}" alt="{{ c.alt }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: {{ c.objPos }}; display: block; transition: transform .7s cubic-bezier(.2,.75,.2,1);"></span>
+                    <span style="padding: 24px 26px 26px; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+                      <span style="font-size: 13px; letter-spacing: .12em; color: #EC8A73; white-space: normal;">{{ c.industry }}</span>
+                      <span style="font-size: 22px; font-weight: 700; letter-spacing: .04em; line-height: 1.5; white-space: normal;">{{ c.name }}</span>
+                      <span style="font-size: 15.5px; line-height: 1.9; color: #33476A; white-space: normal; flex: 1;">{{ c.short }}</span>
+                      <span style="margin-top: 8px; display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; letter-spacing: .06em; color: #1B3A6B;">{{ c.cta }}<span style="display: inline-flex; width: 30px; height: 30px; border-radius: 50%; background: #1B3A6B; color: #fff; align-items: center; justify-content: center; font-size: 15px; transition: transform .35s; transform: {{ c.arrowRot }};">↓</span></span>
+                    </span>
+                  </button>
+                </article>
+              </sc-if>
+              <sc-if value="{{ c.isDetail }}" hint-placeholder-val="{{ false }}">
+                <div data-detail="" id="work-detail" role="region" aria-label="{{ c.d.name }} 作品詳細內容" style="grid-column: 1 / -1; position: relative; background: #EDEDED; border: 2px solid #1B3A6B; box-shadow: 10px 10px 0 #EC8A73; padding: {{ dPad }}; scroll-margin-top: 104px;">
+                  <button type="button" onClick="{{ close }}" aria-label="收合作品內容" style="all: unset; cursor: pointer; position: absolute; top: 14px; right: 14px; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; z-index: 2;" style-hover="color:#EC8A73"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"></path></svg></button>
+                  <div style="display: grid; grid-template-columns: {{ dCols }}; gap: 44px; align-items: center;">
+                    <div style="display: flex; flex-direction: column; gap: 18px; min-width: 0;">
+                      <div style="display: flex; flex-wrap: wrap; gap: 8px; padding-right: 40px;">
+                        <sc-for list="{{ c.d.chips }}" as="chip" hint-placeholder-count="2">
+                          <span style="font-size: 13px; letter-spacing: .06em; padding: 5px 14px; border: 1px solid #1B3A6B; border-radius: 999px; background: #E4E4E4;">{{ chip }}</span>
+                        </sc-for>
+                      </div>
+                      <h3 style="font-size: 30px; font-weight: 700; line-height: 1.45; letter-spacing: .04em; margin: 0;">{{ c.d.name }}</h3>
+                      <span style="width: 44px; height: 4px; background: #EC8A73;"></span>
+                      <p style="font-size: 16.5px; line-height: 2; color: #33476A; margin: 0;">{{ c.d.short }}</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 22px; min-width: 0;">
+                      <div role="tablist" aria-label="預覽裝置" style="display: inline-flex; border: 2px solid #1B3A6B; background: #E4E4E4;">
+                        <sc-for list="{{ c.d.modes }}" as="m" hint-placeholder-count="2">
+                          <button type="button" role="tab" aria-selected="{{ m.sel }}" aria-disabled="{{ m.off }}" title="{{ m.tip }}" onClick="{{ m.pick }}" style="all: unset; cursor: {{ m.cursor }}; display: inline-flex; align-items: center; gap: 8px; padding: 9px 20px; font-size: 15px; letter-spacing: .06em; background: {{ m.bg }}; color: {{ m.fg }}; opacity: {{ m.op }}; transition: background .25s, color .25s;"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="{{ m.icon }}"></path></svg>{{ m.label }}</button>
+                        </sc-for>
+                      </div>
+                      <sc-if value="{{ c.d.isDesk }}" hint-placeholder-val="{{ true }}">
+                        <div style="width: 100%; max-width: 640px;">
+                          <div style="background: #1B3A6B; border-radius: 14px 14px 0 0; padding: 12px 12px 14px;">
+                            <div data-dev-screen="" style="position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #fff; border-radius: 3px;">
+                              <video data-dev-vid="" src="{{ c.d.deskSrc }}" poster="{{ c.d.deskPoster }}" aria-label="{{ c.d.deskAlt }}" muted="" autoPlay="" playsInline="" preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block;"></video>
+                              <button type="button" data-play-ov="" onClick="{{ togglePlay }}" aria-label="{{ playLabel }}" style="all: unset; cursor: pointer; position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: center; opacity: {{ ovOp }}; transition: opacity .3s; background: rgba(16,38,74,.12);"><span style="width: 64px; height: 64px; border-radius: 50%; background: rgba(27,58,107,.88); color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(16,38,74,.3);"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="{{ playIcon }}"></path></svg></span></button>
+                              <div data-dev-ctl="" style="position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; padding: 18px 12px 6px; background: linear-gradient(transparent, rgba(16,38,74,.55)); display: flex; align-items: center; gap: 10px; opacity: {{ ovOp }}; transition: opacity .3s;">
+                                <span data-dev-track="" onClick="{{ seek }}" role="slider" aria-label="影片進度" style="flex: 1; min-width: 30px; height: 16px; display: flex; align-items: center; cursor: pointer;"><span style="position: relative; width: 100%; height: 3px; background: rgba(255,255,255,.4); border-radius: 2px;"><span data-dev-bar="" style="position: absolute; left: 0; top: 0; height: 100%; width: 0%; background: #fff; border-radius: 2px;"></span></span></span>
+                                <span data-dev-time="" style="font-size: 12px; letter-spacing: .03em; color: #fff; font-variant-numeric: tabular-nums; white-space: nowrap;">00:00 / 00:00</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div style="position: relative; height: 14px; margin: 0 -5%; background: linear-gradient(#CDD1D8, #A9AEB8); border-radius: 0 0 14px 14px;"><span style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 18%; height: 6px; background: #959BA6; border-radius: 0 0 6px 6px;"></span></div>
+                        </div>
+                      </sc-if>
+                      <sc-if value="{{ c.d.isMob }}" hint-placeholder-val="{{ false }}">
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: {{ phoneW }}; background: #1B3A6B; border-radius: 34px; padding: 10px; box-shadow: 0 18px 40px rgba(16,38,74,.22);">
+                          <div data-dev-screen="" style="position: relative; aspect-ratio: 9 / 16; overflow: hidden; background: #fff; border-radius: 24px;">
+                            <video data-dev-vid="" src="{{ c.d.mobSrc }}" poster="{{ c.d.mobPoster }}" aria-label="{{ c.d.mobAlt }}" muted="" autoPlay="" playsInline="" preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block;"></video>
+                            <button type="button" data-play-ov="" onClick="{{ togglePlay }}" aria-label="{{ playLabel }}" style="all: unset; cursor: pointer; position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: center; opacity: {{ ovOp }}; transition: opacity .3s; background: rgba(16,38,74,.12);"><span style="width: 64px; height: 64px; border-radius: 50%; background: rgba(27,58,107,.88); color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(16,38,74,.3);"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="{{ playIcon }}"></path></svg></span></button>
+                              <div data-dev-ctl="" style="position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; padding: 18px 12px 6px; background: linear-gradient(transparent, rgba(16,38,74,.55)); display: flex; align-items: center; gap: 10px; opacity: {{ ovOp }}; transition: opacity .3s;">
+                                <span data-dev-track="" onClick="{{ seek }}" role="slider" aria-label="影片進度" style="flex: 1; min-width: 30px; height: 16px; display: flex; align-items: center; cursor: pointer;"><span style="position: relative; width: 100%; height: 3px; background: rgba(255,255,255,.4); border-radius: 2px;"><span data-dev-bar="" style="position: absolute; left: 0; top: 0; height: 100%; width: 0%; background: #fff; border-radius: 2px;"></span></span></span>
+                                <span data-dev-time="" style="font-size: 12px; letter-spacing: .03em; color: #fff; font-variant-numeric: tabular-nums; white-space: nowrap;">00:00 / 00:00</span>
+                              </div>
+                          </div>
+                        </div>
+                        </div>
+                      </sc-if>
+                    </div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; margin-top: {{ csvMT }};">
+                    <sc-if value="{{ c.d.hasTabs }}" hint-placeholder-val="{{ false }}">
+                      <div role="tablist" aria-label="案例說明" style="display: flex; border: 2px solid #1B3A6B; margin-bottom: 4px;">
+                        <sc-for list="{{ c.d.tabs }}" as="tb" hint-placeholder-count="3">
+                          <button type="button" role="tab" aria-selected="{{ tb.sel }}" onClick="{{ tb.pick }}" style="all: unset; cursor: pointer; flex: 1; text-align: center; padding: 10px 4px; font-size: 12.5px; letter-spacing: .12em; font-weight: 600; background: {{ tb.bg }}; color: {{ tb.fg }}; transition: background .25s, color .25s;">{{ tb.label }}</button>
+                        </sc-for>
+                      </div>
+                    </sc-if>
+                    <sc-for list="{{ c.d.blocks }}" as="b" hint-placeholder-count="3">
+                      <div style="display: grid; grid-template-columns: {{ csvCols }}; gap: 14px 40px; padding: 26px 0; border-top: {{ csvBorder }};">
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                          <span style="font-size: 13px; letter-spacing: .24em; color: #1B3A6B; font-weight: 600;">{{ b.en }}</span>
+                          <h4 style="font-size: 19px; font-weight: 700; line-height: 1.6; letter-spacing: .03em; margin: 0;">{{ b.head }}</h4>
+                        </div>
+                        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px;">
+                          <sc-for list="{{ b.items }}" as="it" hint-placeholder-count="3">
+                            <li style="position: relative; padding-left: 18px; font-size: 15.5px; line-height: 1.9; color: {{ it.color }}; font-weight: {{ it.weight }};"><span aria-hidden="true" style="position: absolute; left: 0; top: .78em; width: 7px; height: 7px; background: #EC8A73; transform: rotate(45deg);"></span>{{ it.t }}</li>
+                          </sc-for>
+                        </ul>
+                      </div>
+                    </sc-for>
+                  </div>
+                  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 40px;">
+                    <a href="{{ c.d.url }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; background: #1B3A6B; color: #fff; font-size: 16px; letter-spacing: .06em; padding: 12px 24px; box-shadow: 5px 5px 0 #EC8A73;" style-hover="background:#EC8A73;color:#fff">前往網站 ↗</a>
+                    <a href="https://line.me/R/ti/p/@173lrrhc" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; border: 2px solid #1B3A6B; color: #1B3A6B; font-size: 16px; letter-spacing: .06em; padding: 10px 22px;" style-hover="background:#1B3A6B;color:#fff">我想做類似網站 →</a>
+                  </div>
+                  <div style="display: flex; justify-content: center; margin-top: 30px;">
+                    <button type="button" onClick="{{ close }}" aria-label="收合作品內容" style="all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; padding: 10px 22px; border: 2px solid #1B3A6B; font-size: 15px; letter-spacing: .08em; color: #1B3A6B;" style-hover="background:#1B3A6B;color:#fff"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"></path></svg>收合內容</button>
+                  </div>
+                </div>
+              </sc-if>
+            </sc-for>
+          </div>
+          <sc-if value="{{ g.hasDots }}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; justify-content: center; gap: 10px; margin-top: 14px;">
+              <sc-for list="{{ g.dots }}" as="dt" hint-placeholder-count="3">
+                <button type="button" aria-label="{{ dt.label }}" onClick="{{ dt.go }}" style="all: unset; cursor: pointer; width: 10px; height: 10px; border-radius: 50%; background: {{ dt.color }}; transition: background .25s;"></button>
+              </sc-for>
+            </div>
+          </sc-if>
+          <sc-for list="{{ g.after }}" as="c" hint-placeholder-count="0">
+            <div style="margin-top: 28px;">
+              <sc-if value="{{ c.isDetail }}" hint-placeholder-val="{{ false }}">
+                <div data-detail="" id="work-detail" role="region" aria-label="{{ c.d.name }} 作品詳細內容" style="grid-column: 1 / -1; position: relative; background: #EDEDED; border: 2px solid #1B3A6B; box-shadow: 10px 10px 0 #EC8A73; padding: {{ dPad }}; scroll-margin-top: 104px;">
+                  <button type="button" onClick="{{ close }}" aria-label="收合作品內容" style="all: unset; cursor: pointer; position: absolute; top: 14px; right: 14px; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; z-index: 2;" style-hover="color:#EC8A73"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"></path></svg></button>
+                  <div style="display: grid; grid-template-columns: {{ dCols }}; gap: 44px; align-items: center;">
+                    <div style="display: flex; flex-direction: column; gap: 18px; min-width: 0;">
+                      <div style="display: flex; flex-wrap: wrap; gap: 8px; padding-right: 40px;">
+                        <sc-for list="{{ c.d.chips }}" as="chip" hint-placeholder-count="2">
+                          <span style="font-size: 13px; letter-spacing: .06em; padding: 5px 14px; border: 1px solid #1B3A6B; border-radius: 999px; background: #E4E4E4;">{{ chip }}</span>
+                        </sc-for>
+                      </div>
+                      <h3 style="font-size: 30px; font-weight: 700; line-height: 1.45; letter-spacing: .04em; margin: 0;">{{ c.d.name }}</h3>
+                      <span style="width: 44px; height: 4px; background: #EC8A73;"></span>
+                      <p style="font-size: 16.5px; line-height: 2; color: #33476A; margin: 0;">{{ c.d.short }}</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 22px; min-width: 0;">
+                      <div role="tablist" aria-label="預覽裝置" style="display: inline-flex; border: 2px solid #1B3A6B; background: #E4E4E4;">
+                        <sc-for list="{{ c.d.modes }}" as="m" hint-placeholder-count="2">
+                          <button type="button" role="tab" aria-selected="{{ m.sel }}" aria-disabled="{{ m.off }}" title="{{ m.tip }}" onClick="{{ m.pick }}" style="all: unset; cursor: {{ m.cursor }}; display: inline-flex; align-items: center; gap: 8px; padding: 9px 20px; font-size: 15px; letter-spacing: .06em; background: {{ m.bg }}; color: {{ m.fg }}; opacity: {{ m.op }}; transition: background .25s, color .25s;"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="{{ m.icon }}"></path></svg>{{ m.label }}</button>
+                        </sc-for>
+                      </div>
+                      <sc-if value="{{ c.d.isDesk }}" hint-placeholder-val="{{ true }}">
+                        <div style="width: 100%; max-width: 640px;">
+                          <div style="background: #1B3A6B; border-radius: 14px 14px 0 0; padding: 12px 12px 14px;">
+                            <div data-dev-screen="" style="position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #fff; border-radius: 3px;">
+                              <video data-dev-vid="" src="{{ c.d.deskSrc }}" poster="{{ c.d.deskPoster }}" aria-label="{{ c.d.deskAlt }}" muted="" autoPlay="" playsInline="" preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block;"></video>
+                              <button type="button" data-play-ov="" onClick="{{ togglePlay }}" aria-label="{{ playLabel }}" style="all: unset; cursor: pointer; position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: center; opacity: {{ ovOp }}; transition: opacity .3s; background: rgba(16,38,74,.12);"><span style="width: 64px; height: 64px; border-radius: 50%; background: rgba(27,58,107,.88); color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(16,38,74,.3);"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="{{ playIcon }}"></path></svg></span></button>
+                              <div data-dev-ctl="" style="position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; padding: 18px 12px 6px; background: linear-gradient(transparent, rgba(16,38,74,.55)); display: flex; align-items: center; gap: 10px; opacity: {{ ovOp }}; transition: opacity .3s;">
+                                <span data-dev-track="" onClick="{{ seek }}" role="slider" aria-label="影片進度" style="flex: 1; min-width: 30px; height: 16px; display: flex; align-items: center; cursor: pointer;"><span style="position: relative; width: 100%; height: 3px; background: rgba(255,255,255,.4); border-radius: 2px;"><span data-dev-bar="" style="position: absolute; left: 0; top: 0; height: 100%; width: 0%; background: #fff; border-radius: 2px;"></span></span></span>
+                                <span data-dev-time="" style="font-size: 12px; letter-spacing: .03em; color: #fff; font-variant-numeric: tabular-nums; white-space: nowrap;">00:00 / 00:00</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div style="position: relative; height: 14px; margin: 0 -5%; background: linear-gradient(#CDD1D8, #A9AEB8); border-radius: 0 0 14px 14px;"><span style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 18%; height: 6px; background: #959BA6; border-radius: 0 0 6px 6px;"></span></div>
+                        </div>
+                      </sc-if>
+                      <sc-if value="{{ c.d.isMob }}" hint-placeholder-val="{{ false }}">
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: {{ phoneW }}; background: #1B3A6B; border-radius: 34px; padding: 10px; box-shadow: 0 18px 40px rgba(16,38,74,.22);">
+                          <div data-dev-screen="" style="position: relative; aspect-ratio: 9 / 16; overflow: hidden; background: #fff; border-radius: 24px;">
+                            <video data-dev-vid="" src="{{ c.d.mobSrc }}" poster="{{ c.d.mobPoster }}" aria-label="{{ c.d.mobAlt }}" muted="" autoPlay="" playsInline="" preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block;"></video>
+                            <button type="button" data-play-ov="" onClick="{{ togglePlay }}" aria-label="{{ playLabel }}" style="all: unset; cursor: pointer; position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: center; opacity: {{ ovOp }}; transition: opacity .3s; background: rgba(16,38,74,.12);"><span style="width: 64px; height: 64px; border-radius: 50%; background: rgba(27,58,107,.88); color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(16,38,74,.3);"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="{{ playIcon }}"></path></svg></span></button>
+                              <div data-dev-ctl="" style="position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; padding: 18px 12px 6px; background: linear-gradient(transparent, rgba(16,38,74,.55)); display: flex; align-items: center; gap: 10px; opacity: {{ ovOp }}; transition: opacity .3s;">
+                                <span data-dev-track="" onClick="{{ seek }}" role="slider" aria-label="影片進度" style="flex: 1; min-width: 30px; height: 16px; display: flex; align-items: center; cursor: pointer;"><span style="position: relative; width: 100%; height: 3px; background: rgba(255,255,255,.4); border-radius: 2px;"><span data-dev-bar="" style="position: absolute; left: 0; top: 0; height: 100%; width: 0%; background: #fff; border-radius: 2px;"></span></span></span>
+                                <span data-dev-time="" style="font-size: 12px; letter-spacing: .03em; color: #fff; font-variant-numeric: tabular-nums; white-space: nowrap;">00:00 / 00:00</span>
+                              </div>
+                          </div>
+                        </div>
+                        </div>
+                      </sc-if>
+                    </div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; margin-top: {{ csvMT }};">
+                    <sc-if value="{{ c.d.hasTabs }}" hint-placeholder-val="{{ false }}">
+                      <div role="tablist" aria-label="案例說明" style="display: flex; border: 2px solid #1B3A6B; margin-bottom: 4px;">
+                        <sc-for list="{{ c.d.tabs }}" as="tb" hint-placeholder-count="3">
+                          <button type="button" role="tab" aria-selected="{{ tb.sel }}" onClick="{{ tb.pick }}" style="all: unset; cursor: pointer; flex: 1; text-align: center; padding: 10px 4px; font-size: 12.5px; letter-spacing: .12em; font-weight: 600; background: {{ tb.bg }}; color: {{ tb.fg }}; transition: background .25s, color .25s;">{{ tb.label }}</button>
+                        </sc-for>
+                      </div>
+                    </sc-if>
+                    <sc-for list="{{ c.d.blocks }}" as="b" hint-placeholder-count="3">
+                      <div style="display: grid; grid-template-columns: {{ csvCols }}; gap: 14px 40px; padding: 26px 0; border-top: {{ csvBorder }};">
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                          <span style="font-size: 13px; letter-spacing: .24em; color: #1B3A6B; font-weight: 600;">{{ b.en }}</span>
+                          <h4 style="font-size: 19px; font-weight: 700; line-height: 1.6; letter-spacing: .03em; margin: 0;">{{ b.head }}</h4>
+                        </div>
+                        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px;">
+                          <sc-for list="{{ b.items }}" as="it" hint-placeholder-count="3">
+                            <li style="position: relative; padding-left: 18px; font-size: 15.5px; line-height: 1.9; color: {{ it.color }}; font-weight: {{ it.weight }};"><span aria-hidden="true" style="position: absolute; left: 0; top: .78em; width: 7px; height: 7px; background: #EC8A73; transform: rotate(45deg);"></span>{{ it.t }}</li>
+                          </sc-for>
+                        </ul>
+                      </div>
+                    </sc-for>
+                  </div>
+                  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 40px;">
+                    <a href="{{ c.d.url }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; background: #1B3A6B; color: #fff; font-size: 16px; letter-spacing: .06em; padding: 12px 24px; box-shadow: 5px 5px 0 #EC8A73;" style-hover="background:#EC8A73;color:#fff">前往網站 ↗</a>
+                    <a href="https://line.me/R/ti/p/@173lrrhc" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; border: 2px solid #1B3A6B; color: #1B3A6B; font-size: 16px; letter-spacing: .06em; padding: 10px 22px;" style-hover="background:#1B3A6B;color:#fff">我想做類似網站 →</a>
+                  </div>
+                  <div style="display: flex; justify-content: center; margin-top: 30px;">
+                    <button type="button" onClick="{{ close }}" aria-label="收合作品內容" style="all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; padding: 10px 22px; border: 2px solid #1B3A6B; font-size: 15px; letter-spacing: .08em; color: #1B3A6B;" style-hover="background:#1B3A6B;color:#fff"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"></path></svg>收合內容</button>
+                  </div>
+                </div>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="contact" style="position: relative; z-index: 6; padding: 40px 24px 110px;">
+    <div data-reveal="up" style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <svg viewBox="0 0 24 24" style="width: 44px; fill: #1B3A6B;"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"></path></svg>
+      <div style="position: relative; width: 100%; min-height: 300px; padding-top: 96px; display: flex; flex-direction: column; align-items: center;">
+        <img src="assets/grid-blue.webp" alt="" style="position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: min(620px, 100%); opacity: .42; pointer-events: none;">
+        <h2 style="position: relative; font-size: 30px; font-weight: 700; line-height: 1.6; letter-spacing: .04em; margin: 0;">看到喜歡的作品了嗎？<br>讓你的專業，也成為吸引對的人的引力。</h2>
+      </div>
+      <span style="margin-top: 32px; display: inline-flex;">
+        <span style="display: inline-flex; animation: gf-pulse 2.4s ease-in-out infinite;">
+          <a href="https://line.me/R/ti/p/@173lrrhc" target="_blank" rel="noopener" style="background: #EC8A73; color: #fff; font-size: 19px; font-weight: 600; letter-spacing: .06em; padding: 12px 32px; box-shadow: 6px 6px 0 #10264A;" style-hover="color:#fff;background:#1B3A6B">免費線上諮詢 →</a>
+        </span>
+      </span>
+    </div>
+  </section>
+
+  <footer style="position: relative; z-index: 6; background: #D4D6DA; padding: 30px 24px 20px;">
+    <div style="max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 20px;">
+      <div data-foot-row="" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); align-items: center; gap: 16px;">
+        <a href="index.html" style="display: flex; align-items: center; gap: 10px; justify-self: start;">
+          <img src="assets/badge-navy-cut.webp" alt="引力流域" style="width: 44px; height: auto;" />
+          <img src="assets/wordmark-navy.webp" alt="引力流域 GraviFlow Design" style="height: 24px; width: auto;" />
+        </a>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 14px;">
+          <a href="https://www.instagram.com/graviflow/" target="_blank" rel="noopener" aria-label="Instagram @graviflow" style="width: 40px; height: 40px; border-radius: 11px; background: radial-gradient(circle at 30% 107%, #FDF497 0%, #FDF497 5%, #FD5949 45%, #D6249F 60%, #285AEB 90%); display: flex; align-items: center; justify-content: center; color: #fff; transition: transform .2s;" style-hover="color:#fff;transform:scale(1.1)">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+          </a>
+          <a href="https://www.threads.net/@graviflow" target="_blank" rel="noopener" aria-label="Threads @graviflow" style="width: 40px; height: 40px; border-radius: 11px; background: #000; display: flex; align-items: center; justify-content: center; color: #fff; transition: transform .2s;" style-hover="color:#fff;transform:scale(1.1)">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M16.2 11.3c-.3-2.6-1.9-3.9-4.1-3.9-1.6 0-2.9.7-3.6 2"></path><path d="M16.3 11.2c-3.3-.8-6.6.1-6.4 2.4.2 2 3.4 2.4 4.9.9 1.200-1.2 1.4-3.2 1.3-4.6"></path><path d="M19.5 8.2C18.4 4.9 15.7 3 12 3 6.9 3 4 6.6 4 12s2.9 9 8 9c3.4 0 6-1.6 6.9-4.2.8-2.4-.4-4.6-2.6-5.6"></path></svg>
+          </a>
+        </div>
+        <span></span>
+      </div>
+      <div style="border-top: 1px solid #B9BCC2; padding-top: 14px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+        <span style="color: #33476A; font-size: 14px; letter-spacing: .06em;">© 2026 引力流域 GraviFlow Design</span>
+        <div style="display: flex; align-items: center; gap: 24px;">
+          <a href="privacy.html" style="color: #33476A; font-size: 14px; letter-spacing: .06em;" style-hover="color:#EC8A73">隱私權政策</a>
+          <a href="refund.html" style="color: #33476A; font-size: 14px; letter-spacing: .06em;" style-hover="color:#EC8A73">退換貨政策</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"starCount":{"editor":"range","default":150,"min":40,"max":320,"step":10,"tsType":"number","section":"星星"}}'>
+class Component extends DCLogic {
+  works = [
+ {
+  "id": "vivant",
+  "cat": "one",
+  "name": "自我對話陪伴師薇凡",
+  "industry": "個人成長教練、個人品牌",
+  "short": "將抽象的「自我對話」轉化成容易理解的服務內容，讓訪客先理解、建立信任，再走向詢問與預約。",
+  "url": "https://siolichen.ifreepractice.com/ifa-page/vivant/",
+  "hero": "assets/works/vivant-hero.webp",
+  "desk": "assets/works/vivant-desk.mp4",
+  "mob": "assets/works/vivant-mob.mp4",
+  "cha": {
+   "head": "服務很有價值，但第一次接觸的人不容易理解",
+   "items": [
+    {
+     "t": "「自我對話」屬於抽象服務，客戶第一眼不容易理解「這是什麼、能幫我什麼」。",
+     "b": false
+    },
+    {
+     "t": "許多時間花在重複說明服務內容與進行方式。",
+     "b": false
+    },
+    {
+     "t": "在還沒有理解服務價值之前，訪客自然也很難直接做出預約決定。",
+     "b": false
+    }
+   ]
+  },
+  "sol": {
+   "head": "從客戶的真實困擾開始，而不是急著介紹服務",
+   "items": [
+    {
+     "t": "首頁先從愛情、人際、工作等常見內在困擾切入，讓訪客先辨識「這是不是我的問題」。",
+     "b": false
+    },
+    {
+     "t": "再逐步說明什麼是自我對話、服務如何進行，以及能帶來什麼幫助。",
+     "b": false
+    },
+    {
+     "t": "將原本需要本人一一解釋的內容整理成完整服務銷售頁，再導向預約。",
+     "b": false
+    }
+   ]
+  },
+  "val": {
+   "head": "讓網站先完成理解與信任，再把需求帶進來",
+   "items": [
+    {
+     "t": "減少重複說明服務所花的時間。",
+     "b": false
+    },
+    {
+     "t": "第一次接觸的客戶也能自己理解服務內容。",
+     "b": false
+    },
+    {
+     "t": "網站上線後，客戶回饋詢問與預約都有增加。",
+     "b": true
+    }
+   ]
+  }
+ },
+ {
+  "id": "abula",
+  "cat": "one",
+  "name": "阿布拉旅遊、商務包車",
+  "industry": "包車接送・在地服務",
+  "short": "把原本靠 LINE 說明的包車服務整理成品牌網站，讓新客戶先看懂服務，確認車輛與司機特質，再進一步詢問。",
+  "url": "https://abura-6j67.vercel.app",
+  "hero": "assets/works/abula-hero.webp",
+  "desk": "assets/works/abula-desk.mp4",
+  "mob": "assets/works/abula-mob.mp4",
+  "cha": {
+   "head": "服務靠介紹而來，但新客戶缺少建立信任的地方",
+   "items": [
+    {
+     "t": "客源主要來自旅行社、介紹與既有關係，新客戶對司機本人與服務品質缺少認識。",
+     "b": false
+    },
+    {
+     "t": "車輛、接送服務與相關資訊需要透過 LINE 重複說明。",
+     "b": false
+    },
+    {
+     "t": "社群、QR Code 或轉介紹帶來的人，沒有完整的品牌入口可以進一步了解。",
+     "b": false
+    }
+   ]
+  },
+  "sol": {
+   "head": "把「人、車、服務」一起變成信任內容",
+   "items": [
+    {
+     "t": "集中呈現服務內容、車輛資訊與司機本人，讓客戶不用靠零散訊息拼湊。",
+     "b": false
+    },
+    {
+     "t": "以實際服務情境建立個人品牌感，而不是做成一般車隊型網站。",
+     "b": false
+    },
+    {
+     "t": "將不同來源的客戶統一導向網站，再進一步聯絡詢問。",
+     "b": false
+    }
+   ]
+  },
+  "val": {
+   "head": "從口頭介紹，變成可以直接分享的品牌入口",
+   "items": [
+    {
+     "t": "有人詢問時，可以直接提供網站，不必每次從頭說明。",
+     "b": false
+    },
+    {
+     "t": "第一次認識阿布拉的客戶，也能先了解服務與本人。",
+     "b": false
+    },
+    {
+     "t": "讓旅行社介紹、熟客轉介、社群與 QR Code 都有一致的承接入口。",
+     "b": false
+    }
+   ]
+  }
+ },
+ {
+  "id": "guokao",
+  "cat": "multi",
+  "name": "國考學姐 Zora",
+  "industry": "知識型個人品牌・教育．國考輔導",
+  "short": "將社群流量、免費資源與付費服務整合成完整獲客路徑，讓網站從品牌介紹進一步承接名單與諮詢。",
+  "url": "https://www.zoraexam.com",
+  "hero": "assets/works/guokao-hero.webp",
+  "desk": "assets/works/guokao-desk.mp4",
+  "mob": "assets/works/guokao-mob.mp4",
+  "cha": {
+   "head": "有流量、有專業，卻沒有一個地方把客戶接住",
+   "items": [
+    {
+     "t": "國考經歷、備考方法與服務資訊散落，考生需要自己拼湊「你是誰、能幫我什麼」。",
+     "b": false
+    },
+    {
+     "t": "備考策略諮詢需要花時間說明服務價值與方式，成交前溝通成本高。",
+     "b": false
+    },
+    {
+     "t": "社群雖有流量，卻缺少自己的名單機制，訪客離開後難以持續接觸。",
+     "b": false
+    }
+   ]
+  },
+  "sol": {
+   "head": "把網站設計成一條從「認識」到「諮詢」的路徑",
+   "items": [
+    {
+     "t": "首頁直接呈現「9 次國考 0 落榜、跨三類行政、最快 3–8 月上榜」，快速建立專業辨識。",
+     "b": false
+    },
+    {
+     "t": "建置以電子郵件名單索取「五維能力盲點診斷表」承接社群流量，將訪客轉為 Email 名單。",
+     "b": false
+    },
+    {
+     "t": "整合個人經歷、文章、免費資源與服務，讓考生可以一路從認識、信任走向諮詢。",
+     "b": false
+    }
+   ]
+  },
+  "val": {
+   "head": "網站開始替品牌完成「說明、留客與篩選」",
+   "items": [
+    {
+     "t": "減少超過一半的前期溝通時間，詢問者進站後已能先理解品牌與服務。",
+     "b": true
+    },
+    {
+     "t": "社群流量不再只有瀏覽，而能進一步累積自己的潛在客戶名單。",
+     "b": false
+    },
+    {
+     "t": "讓真正理解服務、具有需求的考生再進一步詢問。",
+     "b": false
+    }
+   ]
+  }
+ },
+ {
+  "id": "mova",
+  "cat": "multi",
+  "name": "女性專屬訓練健身 MOVA",
+  "industry": "女性健身教練服務．運動",
+  "short": "從女性開始健身時真正擔心的問題出發，降低第一次踏進訓練空間的心理門檻。",
+  "url": "https://07mova.vercel.app",
+  "hero": "assets/works/mova-hero.webp",
+  "desk": "assets/works/mova-desk.mp4",
+  "mob": "assets/works/mova-mob.mp4",
+  "cha": {
+   "head": "不是不想運動，而是不確定「這裡適不適合我」",
+   "items": [
+    {
+     "t": "初次健身的女性可能擔心跟不上、被比較、不知道怎麼開始。",
+     "b": false
+    },
+    {
+     "t": "只展示器材與課程，很難消除這些心理阻力。",
+     "b": false
+    },
+    {
+     "t": "教練服務需要先建立「我可以放心把自己交給你」的信任。",
+     "b": false
+    }
+   ]
+  },
+  "sol": {
+   "head": "先回答心理門檻，再介紹訓練服務",
+   "items": [
+    {
+     "t": "從女性常見的健身需求與顧慮切入。",
+     "b": false
+    },
+    {
+     "t": "呈現訓練方式、教練理念與空間氛圍，降低陌生感。",
+     "b": false
+    },
+    {
+     "t": "再將有興趣的訪客導向適合的課程與諮詢。",
+     "b": false
+    }
+   ]
+  },
+  "val": {
+   "head": "讓網站先替第一次來的人降低不安",
+   "items": [
+    {
+     "t": "訪客更容易判斷自己是否適合這個訓練環境。",
+     "b": false
+    },
+    {
+     "t": "教練專業之外，也建立品牌的親近感與安全感。",
+     "b": false
+    },
+    {
+     "t": "用「不只為了瘦，練的是女性真正需要的身體能力。」來傳達工作室理念。",
+     "b": false
+    },
+    {
+     "t": "讓「想開始但還在猶豫」的人因網站詳細資訊更容易跨出詢問的下一步。",
+     "b": false
+    }
+   ]
+  }
+ },
+ {
+  "id": "hengzhi",
+  "cat": "multi",
+  "name": "衡知國際智權事務所",
+  "industry": "智慧財產・專業顧問",
+  "short": "重新整理高度專業的智財服務，讓企業客戶從自己的問題出發，更快找到需要的服務。",
+  "url": "https://06hengzi.vercel.app",
+  "hero": "assets/works/hengzhi-hero.webp",
+  "desk": "assets/works/hengzhi-desk.mp4",
+  "mob": "assets/works/hengzhi-mob.mp4",
+  "cha": {
+   "head": "客戶知道自己有問題，卻不一定知道專業名稱",
+   "items": [
+    {
+     "t": "智財服務專業度高，一般企業未必知道自己該找哪一項服務。",
+     "b": false
+    },
+    {
+     "t": "大量法律與專業術語容易形成理解門檻。",
+     "b": false
+    },
+    {
+     "t": "專業服務又高度依賴信任，網站必須在「看得懂」與「夠專業」之間取得平衡。",
+     "b": false
+    }
+   ]
+  },
+  "sol": {
+   "head": "把專業語言重新翻譯成客戶的決策路徑",
+   "items": [
+    {
+     "t": "重新整理服務分類與資訊層級。",
+     "b": false
+    },
+    {
+     "t": "從企業可能面臨的需求，引導到相對應的專業服務。",
+     "b": false
+    },
+    {
+     "t": "以簡潔、穩定的視覺建立國際智財顧問所需要的專業感。",
+     "b": false
+    }
+   ]
+  },
+  "val": {
+   "head": "專業不再等於難懂",
+   "items": [
+    {
+     "t": "客戶能更快判斷自己的需求該找哪項服務。",
+     "b": false
+    },
+    {
+     "t": "降低閱讀大量專業資訊的負擔。",
+     "b": false
+    },
+    {
+     "t": "讓網站同時完成專業形象與商務詢問的任務。",
+     "b": false
+    }
+   ]
+  }
+ },
+ {
+  "id": "mia",
+  "cat": "multi",
+  "name": "職涯教練林米雅",
+  "industry": "職涯教練・知識型個人品牌",
+  "short": "從轉職者的真實困境出發，串起個人專業、方法與服務，讓知識型服務更容易被理解與選擇。",
+  "url": "https://09miacareer.vercel.app",
+  "hero": "assets/works/mia-hero.webp",
+  "desk": "assets/works/mia-desk.mp4",
+  "mob": "assets/works/mia-mob.mp4",
+  "cha": {
+   "head": "客戶知道自己卡住，卻不知道需要什麼服務",
+   "items": [
+    {
+     "t": "面對第二職涯的人，真正的問題往往不是「我要買哪堂課」，而是不知道下一步怎麼走。",
+     "b": false
+    },
+    {
+     "t": "教練的方法與價值較抽象，單列服務名稱不容易理解差異。",
+     "b": false
+    },
+    {
+     "t": "個人經歷、方法、課程與服務如果彼此分散，也難以形成完整品牌。",
+     "b": false
+    }
+   ]
+  },
+  "sol": {
+   "head": "從職涯問題開始建立服務路徑",
+   "items": [
+    {
+     "t": "先讓訪客辨識自己目前所處的職涯狀態與問題。",
+     "b": false
+    },
+    {
+     "t": "再說明品牌方法、專業背景與可以提供的協助。",
+     "b": false
+    },
+    {
+     "t": "將個人品牌、內容與服務整合成一條從認識到行動的路徑。",
+     "b": false
+    }
+   ]
+  },
+  "val": {
+   "head": "讓「我能幫你什麼」變得具體",
+   "items": [
+    {
+     "t": "客戶更容易把自己的問題與服務產生連結。",
+     "b": false
+    },
+    {
+     "t": "個人專業不再散落，而形成完整的方法與品牌印象。",
+     "b": false
+    },
+    {
+     "t": "為後續課程、諮詢與內容行銷建立共同入口。",
+     "b": false
+    }
+   ]
+  }
+ },
+ {"id": "mori", "cat": "one", "name": "主打人寵共居細分市場的室內設計 MORI 設計", "industry": "室內設計・裝修工程", "short": "不只展示漂亮作品，更透過案例、理念與服務流程，讓屋主理解設計風格與合作價值。", "url": "https://02mori.vercel.app", "hero": "assets/works/mori-hero.webp", "desk": "assets/works/mori-desk.mp4", "mob": "assets/works/mori-mob.mp4", "cha": {"head": "作品很好看，不代表客戶知道為什麼要找你", "items": [{"t": "室內設計網站很容易變成作品照片集。", "b": false}, {"t": "屋主看見漂亮空間，卻不一定理解設計理念、擅長風格與服務差異。", "b": false}, {"t": "裝修是高決策成本服務，客戶在詢問前需要大量信任資訊。", "b": false}]}, "sol": {"head": "讓作品同時負責「展示」與「說服」", "items": [{"t": "以大幅空間作品建立第一印象，再帶入品牌理念。", "b": false}, {"t": "透過案例呈現設計思考，而不只是完工照片。", "b": false}, {"t": "清楚安排服務內容與合作流程，降低第一次委託的不確定感。", "b": false}]}, "val": {"head": "讓美感變成可以被理解的專業", "items": [{"t": "客戶不只看到「做得漂亮」，也能理解品牌的設計觀點。", "b": false}, {"t": "提前回答合作前常見疑問。", "b": false}, {"t": "讓作品集開始具備篩選理想客戶與承接詢問的功能。", "b": false}]}}
+];
+  icons = { desk: 'M3 4h18v12H3z M8 20h8 M12 16v4', mob: 'M7 2h10v20H7z M11 18h2' };
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1280, menuOpen: false, loading: true, loaderFade: false, cat: 'all', open: null, mode: 'desk', playing: false, ended: false };
+
+  componentDidMount() {
+    this.initDeclutter();
+    this.onProg = () => { const p = document.querySelector('[data-prog]'); if (!p) return; const max = document.documentElement.scrollHeight - window.innerHeight; p.style.transform = `scaleX(${max > 0 ? Math.min(1, Math.max(0, (window.scrollY || 0) / max)) : 0})`; };
+    window.addEventListener('scroll', this.onProg, { passive: true }); window.addEventListener('resize', this.onProg); setTimeout(this.onProg, 120);
+    this.onResize = () => this.setState({ w: window.innerWidth, menuOpen: window.innerWidth < 960 ? this.state.menuOpen : false });
+    this.onScroll = () => this.checkReveal();
+    window.addEventListener('resize', this.onResize);
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onHash = () => { if (!this.state.loading) this.openFromHash(); };
+    window.addEventListener('hashchange', this.onHash);
+    this.ready = true;
+    document.documentElement.lang = 'zh-Hant-TW';
+    this.reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.prepHero();
+    const t0 = Date.now();
+    const finish = () => {
+      if (this.finished) return; this.finished = true;
+      setTimeout(() => {
+        this.setState({ loaderFade: true });
+        setTimeout(() => { this.setState({ loading: false }); this.checkReveal(); this.playHero(); this.openFromHash(); }, 700);
+      }, Math.max(0, 900 - (Date.now() - t0)));
+    };
+    if (document.readyState === 'complete') finish(); else window.addEventListener('load', finish, { once: true });
+    setTimeout(finish, 5000);
+    setTimeout(() => { this.scanReveal(); this.onScroll(); }, 60);
+    this.tick = setInterval(() => this.checkReveal(), 400);
+  }
+  openFromHash() {
+    const m = (window.location.hash || '').match(/^#work-([a-z0-9-]+)$/);
+    if (!m || !this.works.find(x => x.id === m[1])) return;
+    this.needStart = true; this.needScroll = true;
+    this.setState({ cat: 'all', open: m[1], mode: window.innerWidth >= 760 ? 'desk' : 'mob', playing: false, ended: false, csvTab: 0 });
+  }
+  componentDidUpdate(pp, ps) {
+    this.scanReveal(); this.checkReveal();
+    if (ps && this._declRun && (ps.open !== this.state.open || ps.cat !== this.state.cat || ps.csvTab !== this.state.csvTab || ps.mode !== this.state.mode || ps.w !== this.state.w)) { this._declRun(); setTimeout(this._declRun, 900); }
+    if (this.needStart) { this.needStart = false; this.startPlayer(); }
+    if (this.needScroll) {
+      this.needScroll = false;
+      const el = document.getElementById('work-detail');
+      if (el) setTimeout(() => el.scrollIntoView({ behavior: this.reduce ? 'auto' : 'smooth', block: 'start' }), 60);
+    }
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('scroll', this.onScroll);
+    clearInterval(this.tick); this.stopPlayer();
+  }
+  prepHero() {
+    document.querySelectorAll('[data-ch], [data-seq]').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = el.hasAttribute('data-ch') ? 'translateY(.35em)' : 'translateY(20px)';
+    });
+  }
+  playHero() {
+    if (this.heroPlayed) return; this.heroPlayed = true;
+    document.querySelectorAll('[data-seq]').forEach((p, i) => { const d = i ? 700 : 0; p.style.transition = `opacity .8s ease ${d}ms, transform .8s cubic-bezier(.2,.75,.2,1) ${d}ms`; p.style.opacity = '1'; p.style.transform = 'none'; });
+    document.querySelectorAll('[data-ch]').forEach((el, i) => {
+      const d = 250 + i * 95;
+      el.style.transition = `opacity .5s ease ${d}ms, transform .5s cubic-bezier(.2,.75,.2,1) ${d}ms`;
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+  }
+  checkReveal() {
+    if (this.state.loading) return;
+    const vh = window.innerHeight;
+    document.querySelectorAll('[data-rv="1"]').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < vh * 0.9 && r.bottom > 0) { el.setAttribute('data-rv', '2'); el.style.opacity = '1'; el.style.transform = 'none'; }
+    });
+  }
+  scanReveal() {
+    if (!this.ready) return;
+    document.querySelectorAll('[data-reveal]:not([data-rv])').forEach(el => {
+      el.setAttribute('data-rv', '1');
+      const d = parseInt(el.getAttribute('data-delay') || '0', 10);
+      el.style.opacity = '0'; el.style.transform = 'translateY(36px)';
+      el.style.transition = `opacity .9s ease ${d}ms, transform .9s cubic-bezier(.2,.75,.2,1) ${d}ms`;
+    });
+  }
+
+  // ── 網站瀏覽影片：點開作品就自動播放（靜音、行內播放，手機也能自動播） ──
+  startPlayer() {
+    this.stopPlayer();
+    const v = document.querySelector('[data-detail] [data-dev-vid]');
+    if (!v) return;
+    v.muted = true; v.defaultMuted = true; v.playsInline = true; v.setAttribute('playsinline', ''); v.setAttribute('webkit-playsinline', '');
+    this.vid = v;
+    const paint = () => this.paint();
+    const onPlay = () => { if (!this.state.playing) this.setState({ playing: true, ended: false }); };
+    const onPause = () => { if (this.state.playing) this.setState({ playing: false }); };
+    const onEnd = () => this.setState({ playing: false, ended: true });
+    v.addEventListener('timeupdate', paint); v.addEventListener('loadedmetadata', paint);
+    v.addEventListener('play', onPlay); v.addEventListener('pause', onPause); v.addEventListener('ended', onEnd);
+    this.vidOff = () => { v.removeEventListener('timeupdate', paint); v.removeEventListener('loadedmetadata', paint); v.removeEventListener('play', onPlay); v.removeEventListener('pause', onPause); v.removeEventListener('ended', onEnd); };
+    const loop = () => { this.paint(); this.raf = requestAnimationFrame(loop); };
+    this.raf = requestAnimationFrame(loop);
+    if (this.reduce) { v.pause(); this.setState({ playing: false, ended: false }); }
+    else { const pr = v.play(); if (pr && pr.catch) pr.catch(() => this.setState({ playing: false })); }
+    this.paint();
+  }
+  stopPlayer() {
+    cancelAnimationFrame(this.raf);
+    if (this.vidOff) { this.vidOff(); this.vidOff = null; }
+    if (this.vid) { try { this.vid.pause(); } catch (e) {} this.vid = null; }
+  }
+  paint() {
+    const v = this.vid; if (!v || !v.isConnected) return;
+    const D = isFinite(v.duration) ? v.duration : 0, t = v.currentTime || 0;
+    const bar = document.querySelector('[data-detail] [data-dev-bar]'), tm = document.querySelector('[data-detail] [data-dev-time]');
+    const fmt = s => { s = Math.floor(s); return String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0'); };
+    if (bar) bar.style.width = (D ? t / D * 100 : 0).toFixed(2) + '%';
+    if (tm) tm.textContent = fmt(t) + ' / ' + fmt(D);
+  }
+
+  renderVals() {
+    if (!this.stars || this._sc !== this.props.starCount) { this._sc = this.props.starCount; this.stars = this.buildStars(); }
+    if (!this.heroStars) this.heroStars = this.buildHeroStars();
+    const w = this.state.w, mobile = w < 960, mo = mobile && this.state.menuOpen, two = w >= 760, wide = w >= 1000;
+    const { cat, open, mode, playing, ended } = this.state;
+    const CATS = [['all', '全部'], ['multi', '多頁式品牌形象網站'], ['one', '一頁式銷售頁']];
+    const GROUPS = [['multi', '多頁式品牌形象網站', 'BRAND WEBSITE'], ['one', '一頁式銷售頁', 'LANDING PAGE']];
+    const ORDER = ['guokao', 'mova', 'hengzhi', 'mia', 'mori', 'vivant', 'abula'];
+    const openWork = (id) => {
+      const wk = this.works.find(x => x.id === id);
+      const m = two ? 'desk' : 'mob';
+      this.needStart = true; this.needScroll = true;
+      this.stopPlayer(); this.setState({ open: id, mode: m, playing: false, ended: false, csvTab: 0 });
+    };
+    const closeWork = () => {
+      const id = this.state.open; this.stopPlayer();
+      this.setState({ open: null, playing: false });
+      setTimeout(() => { const c = document.getElementById('card-' + id); if (c) c.scrollIntoView({ behavior: this.reduce ? 'auto' : 'smooth', block: 'center' }); }, 30);
+    };
+    const groups = GROUPS.filter(([k]) => cat === 'all' || cat === k).map(([k, title, en]) => {
+      const list = this.works.filter(x => x.cat === k).sort((p, q) => ORDER.indexOf(p.id) - ORDER.indexOf(q.id));
+      const cells = [];
+      const per = two ? 2 : 1, after = [];
+      const openIdx = list.findIndex(x => x.id === open);
+      const insertAfter = openIdx < 0 ? -1 : Math.min(list.length - 1, Math.floor(openIdx / per) * per + per - 1);
+      list.forEach((x, i) => {
+        const isOpen = x.id === open;
+        cells.push({ isCard: true, isDetail: false, cardId: 'card-' + x.id, hero: x.hero, objPos: x.id === 'abula' ? 'left center' : (x.id === 'mova' ? 'left top' : 'top center'), alt: x.name + ' 網站首頁畫面', name: x.name, industry: x.industry, short: x.short,
+          open: isOpen, cta: isOpen ? '收合內容' : '查看詳細內容', arrowRot: isOpen ? 'rotate(180deg)' : 'none',
+          shadow: isOpen ? '8px 8px 0 #EC8A73' : '0 0 0 transparent', lift: isOpen ? 'translateY(-4px)' : 'none',
+          toggle: () => (isOpen ? closeWork() : openWork(x.id)) });
+        if (i === insertAfter) {
+          const wk = this.works.find(y => y.id === open);
+          const m = mode === 'mob' ? 'mob' : 'desk';
+          const mk = (key, label) => {
+            const avail = true, sel = m === key;
+            return { label: avail ? label : label + '（準備中）', icon: this.icons[key], sel, off: !avail, tip: avail ? '' : '手機版截圖準備中',
+              bg: sel ? '#1B3A6B' : 'transparent', fg: sel ? '#fff' : '#1B3A6B', op: avail ? 1 : .45, cursor: avail ? 'pointer' : 'not-allowed',
+              pick: () => { if (!avail || sel) return; this.stopPlayer(); this.needStart = true; this.setState({ mode: key, playing: false, ended: false }); } };
+          };
+          const blocks = [['CHALLENGE', wk.cha, '#1B3A6B'], ['SOLUTION', wk.sol, '#1B3A6B'], ['VALUE', wk.val, '#1B3A6B']].map(([en, b, color]) => ({
+            en, color, head: b.head, items: b.items.map(it => ({ t: it.t, weight: it.b ? 700 : 500, color: it.b ? '#1B3A6B' : '#33476A' })) }));
+          const csvTab = this.state.csvTab || 0;
+          (two ? cells : after).push({ isCard: false, isDetail: true, d: {
+            name: wk.name, short: wk.short, url: wk.url, chips: [title, ...wk.industry.split(/[・．、]/).filter(Boolean)],
+            modes: [mk('desk', '桌機版'), mk('mob', '手機版')],
+            isDesk: m === 'desk', isMob: m === 'mob',
+            deskSrc: wk.desk, deskPoster: wk.desk.replace('.mp4', '-poster.webp'), deskAlt: wk.name + ' 桌機版網站瀏覽影片',
+            mobSrc: wk.mob, mobPoster: wk.mob.replace('.mp4', '-poster.webp'), mobAlt: wk.name + ' 手機版網站瀏覽影片',
+            canPlay: true, hasTabs: !two, blocks: two ? blocks : [blocks[csvTab]],
+            tabs: blocks.map((bk, ti) => ({ label: bk.en, sel: ti === csvTab, bg: ti === csvTab ? '#1B3A6B' : 'transparent', fg: ti === csvTab ? '#fff' : '#1B3A6B', pick: () => this.setState({ csvTab: ti }) })) } });
+        }
+      });
+      const ci = (this.state.car || {})[k] || 0;
+      return { title, en, cells, after, key: k, hasDots: !two && list.length > 1,
+        dots: list.map((x, di) => ({ label: `第 ${di + 1} 個作品`, color: di === ci ? '#1B3A6B' : 'rgba(27,58,107,.25)', go: () => { const el = document.querySelector(`[data-car="${k}"]`); const card = el && el.children[di]; if (card) el.scrollTo({ left: card.offsetLeft - (el.clientWidth - card.offsetWidth) / 2, behavior: this.reduce ? 'auto' : 'smooth' }); } })),
+        onCar: (e) => { const el = e.currentTarget; if (two || !el) return; const kids = [...el.children]; const mid = el.scrollLeft + el.clientWidth / 2; let best = 0, bd = 1e9; kids.forEach((c, n) => { const d = Math.abs(c.offsetLeft + c.offsetWidth / 2 - mid); if (d < bd) { bd = d; best = n; } }); if (best !== ci) this.setState(s => ({ car: { ...(s.car || {}), [k]: best } })); } };
+    });
+    return {
+      starField: this.stars,
+      heroStars: this.heroStars,
+      heroAstroW: wide ? '205px' : '155px', heroAstroL: wide ? 'calc(50% + 95px)' : 'calc(50% + 80px)', heroAstroT: wide ? '20%' : '24%', heroAstroDisp: two ? 'block' : 'none', heroPSize: two ? '17px' : '15px',
+      h1: [...'作品集'],
+      tabs: CATS.map(([k, label]) => ({ label, sel: cat === k, bg: cat === k ? '#1B3A6B' : 'transparent', fg: cat === k ? '#fff' : '#1B3A6B',
+        pick: () => { if (cat === k) return; const keep = open && (k === 'all' || (this.works.find(x => x.id === open) || {}).cat === k); if (!keep) this.stopPlayer(); else this.needStart = true; this.setState({ cat: k, open: keep ? open : null }); } })),
+      groups,
+      cols: two ? 'repeat(2, minmax(0, 1fr))' : 'none',
+      gDisp: two ? 'grid' : 'flex', gGap: two ? '40px 32px' : '16px', gOver: two ? 'visible' : 'auto', gSnap: two ? 'none' : 'x mandatory',
+      gPad: two ? '0' : '6px 24px 14px', gMargin: two ? '0' : '0 -24px', cardFlex: two ? '0 1 auto' : '0 0 82%',
+      csvMT: two ? '52px' : '30px', csvBorder: two ? '2px solid #1B3A6B' : '0',
+      dCols: wide ? 'minmax(0, 5fr) minmax(0, 7fr)' : 'minmax(0, 1fr)',
+      csvCols: two ? 'minmax(0, 4fr) minmax(0, 7fr)' : 'minmax(0, 1fr)',
+      dPad: two ? '44px 44px 48px' : '30px 20px 34px',
+      phoneW: two ? '300px' : 'min(280px, 78vw)',
+      close: closeWork,
+      ovOp: playing ? 0 : 1,
+      playIcon: playing ? 'M7 5h3.5v14H7z M13.5 5H17v14h-3.5z' : 'M8 5l11 7-11 7z',
+      playLabel: playing ? '暫停瀏覽' : '播放瀏覽',
+      replayLabel: ended ? '重新播放' : '從頭播放',
+      togglePlay: () => { const v = this.vid; if (!v) return; if (v.paused) { if (v.ended) v.currentTime = 0; v.play().catch(() => {}); } else v.pause(); },
+      replay: () => { const v = this.vid; if (!v) return; v.currentTime = 0; v.play().catch(() => {}); this.paint(); },
+      seek: (e) => { const v = this.vid; if (!v || !isFinite(v.duration)) return; const r = e.currentTarget.getBoundingClientRect(); v.currentTime = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)) * v.duration; this.paint(); },
+      loading: this.state.loading,
+      loaderOpacity: this.state.loaderFade ? 0 : 1,
+      isDesktop: !mobile, isMobile: mobile, showMenu: mo, menuOpen: mo,
+      bar1: mo ? 'translateY(8px) rotate(45deg)' : 'none',
+      bar2: mo ? 0 : 1,
+      bar3: mo ? 'translateY(-8px) rotate(-45deg)' : 'none',
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false })
+    };
+  }
+  initDeclutter() {
+    const run = () => { try { this.declutterStars(); } catch (e) {} };
+    let t = 0;
+    this._declRun = () => { clearTimeout(t); t = setTimeout(run, 280); };
+    window.addEventListener('resize', this._declRun);
+    window.addEventListener('load', () => { setTimeout(run, 600); setTimeout(run, 2600); }, { once: true });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => setTimeout(run, 400));
+    setTimeout(run, 1800); setTimeout(run, 4200);
+  }
+
+  declutterStars() {
+    const isStarEl = c => c.style && /gf-tw/.test(c.style.animation || '');
+    const layers = [...document.querySelectorAll('div[aria-hidden="true"]')].filter(d => d.children.length >= 12 && [...d.children].every(isStarEl));
+    if (!layers.length) return;
+    const neu = document.createElement('style');
+    neu.textContent = '[data-reveal],[data-reveal] *{transition:none !important}[data-reveal]{transform:none !important}';
+    document.head.appendChild(neu);
+    try { this._declCore(layers); } finally {
+      const ts = document.createElement('style'); ts.textContent = '[data-reveal],[data-reveal] *{transition:none !important}';
+      document.head.appendChild(ts); neu.remove(); void document.body.offsetHeight;
+      requestAnimationFrame(() => requestAnimationFrame(() => ts.remove()));
+    }
+  }
+
+  _declCore(layers) {
+    const sx = window.scrollX, sy = window.scrollY, CELL = 120;
+    const grid = new Map();
+    const add = (r, kind) => {
+      for (let gx = Math.floor(r.l / CELL); gx <= Math.floor(r.r / CELL); gx++)
+        for (let gy = Math.floor(r.t / CELL); gy <= Math.floor(r.b / CELL); gy++) {
+          const k = gx + ',' + gy; if (!grid.has(k)) grid.set(k, []); grid.get(k).push(r);
+        }
+      r.kind = kind;
+    };
+    const hits = (b, ignoreBoxes) => {
+      const seen = new Set();
+      for (let gx = Math.floor(b.l / CELL); gx <= Math.floor(b.r / CELL); gx++)
+        for (let gy = Math.floor(b.t / CELL); gy <= Math.floor(b.b / CELL); gy++) {
+          const a = grid.get(gx + ',' + gy); if (!a) continue;
+          for (const r of a) {
+            if (seen.has(r)) continue; seen.add(r);
+            if (ignoreBoxes && r.kind === 'box') continue;
+            if (r.kind === 'star') {
+              const dx = r.cx - b.cx, dy = r.cy - b.cy, need = r.rad + b.rad + (r.big && b.big ? 46 : r.big || b.big ? 30 : 16);
+              if (dx * dx + dy * dy < need * need) return true;
+            } else if (b.l < r.r && b.r > r.l && b.t < r.b && b.b > r.t) return true;
+          }
+        }
+      return false;
+    };
+    // text lines
+    const vis = el => { for (let e = el; e && e !== document.body; e = e.parentElement) { const cs = getComputedStyle(e); if (cs.display === 'none' || cs.visibility === 'hidden') return false; } return true; };
+    const tw = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, { acceptNode: n => n.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT });
+    const range = document.createRange(); const P = 7; let n;
+    const visCache = new Map();
+    while ((n = tw.nextNode())) {
+      const pe = n.parentElement; if (!pe || pe.closest('script,style,[aria-hidden="true"] svg')) continue;
+      if (!visCache.has(pe)) visCache.set(pe, vis(pe)); if (!visCache.get(pe)) continue;
+      range.selectNodeContents(n);
+      for (const q of range.getClientRects()) if (q.width > 0 && q.height > 0) add({ l: q.left + sx - P, r: q.right + sx + P, t: q.top + sy - P, b: q.bottom + sy + P }, 'text');
+    }
+    // solid boxes: cards, quotes, media, buttons
+    document.querySelectorAll('article, blockquote, video, [data-cc], [data-astro-box], a[href] , button, img, svg').forEach(el => {
+      if (el.matches('svg') && (el.closest('[aria-hidden="true"]') && el.parentElement && /gf-tw/.test(el.style.animation || '') || el.closest('a,button'))) return;
+      if (el.matches('img') && (el.closest('[aria-hidden="true"]') || el.getAttribute('data-reveal') === 'grid' || /grid-/.test(el.getAttribute('src') || ''))) return;
+      const q = el.getBoundingClientRect(); if (q.width < 30 || q.height < 20 || !vis(el)) return;
+      add({ l: q.left + sx - 4, r: q.right + sx + 4, t: q.top + sy - 4, b: q.bottom + sy + 4 }, 'box');
+    });
+    const ang = []; for (let i = 0; i < 16; i++) ang.push(i * Math.PI / 8);
+    for (const L of layers) {
+      const lr = L.getBoundingClientRect(), LW = lr.width, LH = lr.height; if (!LW || !LH) continue;
+      const hero = !!L.closest('#home, [data-hero]') && getComputedStyle(L).zIndex === '1';
+      for (const s of L.children) {
+        if (!s.dataset.ot) { s.dataset.ot = s.style.top; s.dataset.ol = s.style.left; }
+        s.style.top = s.dataset.ot; s.style.left = s.dataset.ol; s.style.visibility = '';
+        const w = parseFloat(s.style.width) || 4;
+        const x0 = parseFloat(s.dataset.ol) / 100 * LW, y0 = parseFloat(s.dataset.ot) / 100 * LH;
+        const rad = w / 2, big = w >= 9;
+        let placed = null;
+        for (let ri = 0; ri <= 14 && !placed; ri++) {
+          const R = ri * 14;
+          for (const a of (ri ? ang : [0])) {
+            const x = x0 + Math.cos(a) * R, y = y0 + Math.sin(a) * R;
+            if (x < 2 || x > LW - w - 2 || y < 2 || y > LH - w - 2) continue;
+            const cx = lr.left + sx + x + rad, cy = lr.top + sy + y + rad;
+            const b = { l: cx - rad, r: cx + rad, t: cy - rad, b: cy + rad, cx, cy, rad, big };
+            if (!hits(b, hero)) { placed = { x, y, b }; break; }
+          }
+        }
+        if (!placed) { s.style.visibility = 'hidden'; continue; }
+        if (placed.x !== x0 || placed.y !== y0) { s.style.left = (placed.x / LW * 100).toFixed(3) + '%'; s.style.top = (placed.y / LH * 100).toFixed(3) + '%'; }
+        add(placed.b, 'star');
+      }
+    }
+  }
+
+  buildHeroStars() {
+    let seed = 991;
+    const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+    const h = React.createElement;
+    const path = 'M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z';
+    const kids = [];
+    for (let i = 0; i < 40; i++) {
+      const top = 18 + rnd() * 70, left = rnd() * 100;
+      const color = rnd() < 0.35 ? '#EC8A73' : '#FFFFFF';
+      const isStar = rnd() < 0.12;
+      const size = isStar ? 9 + rnd() * 7 : 2 + rnd() * 4;
+      const style = { position: 'absolute', top: top + '%', left: left + '%', width: size, height: size,
+        animation: `gf-tw ${(3.5 + rnd() * 4.5).toFixed(2)}s ease-in-out ${(-rnd() * 8).toFixed(2)}s infinite` };
+      kids.push(isStar
+        ? h('svg', { key: i, viewBox: '0 0 24 24', style: { ...style, fill: color } }, h('path', { d: path }))
+        : h('span', { key: i, style: { ...style, borderRadius: '50%', background: color } }));
+    }
+    return h('div', { 'aria-hidden': true, style: { position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none' } }, kids);
+  }
+  buildStars() {
+    const count = this.props.starCount ?? 150;
+    let seed = 20261004;
+    const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+    const h = React.createElement;
+    const path = 'M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z';
+    const kids = [];
+    for (let i = 0; i < count; i++) {
+      const top = rnd() * 100;
+      const side = rnd() < 0.72;
+      const left = side ? (rnd() < 0.5 ? rnd() * 17 : 83 + rnd() * 16) : rnd() * 100;
+      const dark = top < 12;
+      const orange = rnd() < 0.55;
+      const color = orange ? '#EC8A73' : (dark ? '#FFFFFF' : '#2D5FA8');
+      const isStar = rnd() < 0.5;
+      const size = isStar ? (side ? 14 + rnd() * 22 : 10 + rnd() * 10) : (3 + rnd() * (side ? 9 : 5));
+      const style = {
+        position: 'absolute', top: top + '%', left: left + '%', width: size, height: size,
+        animation: `gf-tw ${(1.4 + rnd() * 4.6).toFixed(2)}s ease-in-out ${(-rnd() * 6).toFixed(2)}s infinite`, willChange: 'opacity, transform'
+      };
+      kids.push(isStar
+        ? h('svg', { key: i, viewBox: '0 0 24 24', style: { ...style, fill: color } }, h('path', { d: path }))
+        : h('span', { key: i, style: { ...style, borderRadius: '50%', background: color } }));
+    }
+    return h('div', { 'aria-hidden': true, style: { position: 'absolute', inset: 0, zIndex: 5, pointerEvents: 'none', overflow: 'hidden' } }, kids);
+  }
+}
+</script>
+</body>
+</html>
