@@ -33,6 +33,13 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://www.graviflowdesign.com/#org","name":"引力流域設計 GraviFlow Design","alternateName":"引力流域","url":"https://www.graviflowdesign.com/","logo":"https://www.graviflowdesign.com/assets/badge-navy-cut.webp","description":"為講師、顧問與個人品牌打造品牌形象網站與銷售漏斗獲客系統的網站設計與數位行銷工作室。","areaServed":"TW","knowsAbout":["網站架設","品牌形象網站","銷售漏斗","數位行銷","SEO"],"sameAs":["https://www.instagram.com/graviflow/","https://www.threads.net/@graviflow"]},{"@type":"WebSite","@id":"https://www.graviflowdesign.com/#website","url":"https://www.graviflowdesign.com/","name":"引力流域設計","inLanguage":"zh-Hant-TW","publisher":{"@id":"https://www.graviflowdesign.com/#org"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"我已經有網站了，還需要重新做嗎？","acceptedAnswer":{"@type":"Answer","text":"不一定。如果現有網站還能使用，我們也可以從內容、架構與獲客路徑著手，找出真正需要改善的地方。"}},{"@type":"Question","name":"我不知道自己到底需要哪一種網站，怎麼辦？","acceptedAnswer":{"@type":"Answer","text":"不用先想好。你可以先告訴我們目前的服務、客群與遇到的問題，我們會一起判斷適合從品牌網站、課程網站，還是獲客系統開始。"}},{"@type":"Question","name":"我只想做形象網站，也可以嗎？","acceptedAnswer":{"@type":"Answer","text":"可以。不是每個品牌一開始都需要完整的獲客系統，我們會依照你目前的階段與需求，設計適合的網站。"}},{"@type":"Question","name":"我沒有行銷背景，也能跟你們合作嗎？","acceptedAnswer":{"@type":"Answer","text":"可以。你不需要先懂網站或行銷，我們會把專業術語轉成容易理解的方式，一起釐清你的客群、服務與網站該完成的任務。"}},{"@type":"Question","name":"網站做好之後，我可以自己修改嗎？","acceptedAnswer":{"@type":"Answer","text":"可以。我們會提供後台權限與基本操作教學，讓你可以自己更新圖片、文字與服務內容，不必每次修改都找設計師。"}},{"@type":"Question","name":"我沒有完整的網站文案和圖片，怎麼辦？","acceptedAnswer":{"@type":"Answer","text":"不用全部準備好才開始。我們會先一起整理現有素材，再判斷哪些內容需要補充、重寫或重新呈現。"}},{"@type":"Question","name":"你們只做網站設計嗎？","acceptedAnswer":{"@type":"Answer","text":"不只。除了品牌網站與課程網站，也能依照需求延伸到獲客頁面、銷售流程與自動化，讓網站不只是展示品牌，也能承接後續的行銷。"}},{"@type":"Question","name":"做網站真的能帶來客戶嗎？","acceptedAnswer":{"@type":"Answer","text":"網站不是流量的魔法按鈕。但好的網站可以讓流量更容易被接住、理解與轉化；如果你的目標是獲客，我們會從客群與服務出發一起規劃，而不只是把網站做漂亮。"}}]}]}</script>
 <style>
+/* mobile: smaller stars and sparkles */
+@media (max-width: 959px) {
+  svg[data-reveal="spin"], svg[viewBox="0 0 24 24"][style^="width: 44px"] { width: 26px !important; }
+  svg[viewBox="0 0 24 24"][style^="width: 26px"] { width: 16px !important; }
+  svg[viewBox="0 0 24 24"][style*="position: absolute"][style*="width: 42px"] { width: 24px !important; left: -12px !important; top: -12px !important; }
+  svg[viewBox="0 0 24 24"][style*="position: absolute"][style*="width: 30px"] { width: 18px !important; }
+}
 /* mobile type scale: smaller headings and body, tighter leading (specific rules below override) */
 @media (max-width: 959px) {
   [style*="font-size: 14px"] { font-size: 13px !important; }
@@ -847,7 +854,7 @@ class Component extends DCLogic {
       const color = rnd() < 0.35 ? '#EC8A73' : '#FFFFFF';
       const isStar = rnd() < 0.12;
       const size = isStar ? 9 + rnd() * 7 : 2 + rnd() * 4;
-      const style = { position: 'absolute', top: top + '%', left: left + '%', width: size, height: size,
+      const style = { position: 'absolute', top: top + '%', left: left + '%', width: size * (window.innerWidth < 960 ? (isStar ? .5 : .75) : 1), height: size * (window.innerWidth < 960 ? (isStar ? .5 : .75) : 1),
         animation: `gf-tw ${(3.5 + rnd() * 4.5).toFixed(2)}s ease-in-out ${(-rnd() * 8).toFixed(2)}s infinite` };
       kids.push(isStar
         ? h('svg', { key: i, viewBox: '0 0 24 24', style: { ...style, fill: color } }, h('path', { d: path }))
@@ -875,7 +882,7 @@ class Component extends DCLogic {
       const dur = (1.4 + rnd() * 4.6).toFixed(2);
       const delay = (-rnd() * 6).toFixed(2);
       const style = {
-        position: 'absolute', top: top + '%', left: left + '%', width: size, height: size,
+        position: 'absolute', top: top + '%', left: left + '%', width: size * (window.innerWidth < 960 ? (isStar ? .5 : .75) : 1), height: size * (window.innerWidth < 960 ? (isStar ? .5 : .75) : 1),
         animation: `gf-tw ${dur}s ease-in-out ${delay}s infinite`, willChange: 'opacity, transform'
       };
       kids.push(isStar

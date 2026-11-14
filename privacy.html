@@ -32,6 +32,13 @@
 <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <style>
+/* mobile: smaller stars and sparkles */
+@media (max-width: 959px) {
+  svg[data-reveal="spin"], svg[viewBox="0 0 24 24"][style^="width: 44px"] { width: 26px !important; }
+  svg[viewBox="0 0 24 24"][style^="width: 26px"] { width: 16px !important; }
+  svg[viewBox="0 0 24 24"][style*="position: absolute"][style*="width: 42px"] { width: 24px !important; left: -12px !important; top: -12px !important; }
+  svg[viewBox="0 0 24 24"][style*="position: absolute"][style*="width: 30px"] { width: 18px !important; }
+}
 /* mobile type scale: smaller headings and body, tighter leading (specific rules below override) */
 @media (max-width: 959px) {
   [style*="font-size: 14px"] { font-size: 13px !important; }
@@ -379,7 +386,7 @@ class Component extends DCLogic {
       const color = rnd() < 0.35 ? '#EC8A73' : '#FFFFFF';
       const isStar = rnd() < 0.12;
       const size = isStar ? 9 + rnd() * 7 : 2 + rnd() * 4;
-      const style = { position: 'absolute', top: top + '%', left: left + '%', width: size, height: size,
+      const style = { position: 'absolute', top: top + '%', left: left + '%', width: size * (window.innerWidth < 960 ? (isStar ? .5 : .75) : 1), height: size * (window.innerWidth < 960 ? (isStar ? .5 : .75) : 1),
         animation: `gf-tw ${(3.5 + rnd() * 4.5).toFixed(2)}s ease-in-out ${(-rnd() * 8).toFixed(2)}s infinite` };
       kids.push(isStar
         ? h('svg', { key: i, viewBox: '0 0 24 24', style: { ...style, fill: color } }, h('path', { d: path }))
@@ -404,7 +411,7 @@ class Component extends DCLogic {
       const isStar = rnd() < 0.5;
       const size = isStar ? (side ? 14 + rnd() * 22 : 10 + rnd() * 10) : (3 + rnd() * (side ? 9 : 5));
       const style = {
-        position: 'absolute', top: top + '%', left: left + '%', width: size, height: size,
+        position: 'absolute', top: top + '%', left: left + '%', width: size * (window.innerWidth < 960 ? (isStar ? .5 : .75) : 1), height: size * (window.innerWidth < 960 ? (isStar ? .5 : .75) : 1),
         animation: `gf-tw ${(1.4 + rnd() * 4.6).toFixed(2)}s ease-in-out ${(-rnd() * 6).toFixed(2)}s infinite`, willChange: 'opacity, transform'
       };
       kids.push(isStar
