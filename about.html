@@ -31,6 +31,8 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"AboutPage","@id":"https://www.graviflowdesign.com/about#webpage","url":"https://www.graviflowdesign.com/about","name":"關於我們｜引力流域設計","inLanguage":"zh-Hant-TW","isPartOf":{"@id":"https://www.graviflowdesign.com/#website"},"about":{"@id":"https://www.graviflowdesign.com/#org"}},{"@type":"Person","name":"Oli","jobTitle":"主理人","worksFor":{"@id":"https://www.graviflowdesign.com/#org"},"image":"https://www.graviflowdesign.com/assets/oli.webp"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://www.graviflowdesign.com/"},{"@type":"ListItem","position":2,"name":"關於我們","item":"https://www.graviflowdesign.com/about"}]},{"@type":"HowTo","name":"引力流域服務流程","step":[{"@type":"HowToStep","position":1,"name":"線上諮詢溝通"},{"@type":"HowToStep","position":2,"name":"報價"},{"@type":"HowToStep","position":3,"name":"簽約"},{"@type":"HowToStep","position":4,"name":"客戶資訊上傳"},{"@type":"HowToStep","position":5,"name":"設計製作"},{"@type":"HowToStep","position":6,"name":"交付成品"},{"@type":"HowToStep","position":7,"name":"維護"}]}]}</script>
 <style>
+/* story text: both edges flush, like printed Chinese text */
+[data-story] > p { text-align: justify; text-justify: inter-character; text-wrap: wrap !important; line-break: strict; text-spacing-trim: trim-start; font-feature-settings: "chws"; }
 /* mobile: smaller stars and sparkles */
 @media (max-width: 959px) {
   svg[data-reveal="spin"], svg[viewBox="0 0 24 24"][style^="width: 44px"] { width: 26px !important; }
@@ -106,7 +108,9 @@
     [data-secbody2] > article { padding: 28px 20px 26px !important; gap: 14px !important; }
     [data-secbody2] > article h3 { font-size: 18px !important; }
     [data-secbody2] > article p { font-size: 14px !important; line-height: 1.7 !important; }
-    [data-secbody2] { gap: 36px !important; }
+    [data-secbody2] { gap: 36px !important; padding: 0 !important; }
+    [data-vals] { padding: 0 !important; }
+    [data-fnum] { display: none !important; }
   }
   @keyframes gf-astro-drift { 0%,100% { transform: translate(0, 0) rotate(0deg); } 50% { transform: translate(-3.6%, -3.6%) rotate(-3deg); } }
   @keyframes gf-load { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }
@@ -190,16 +194,16 @@
         </div>
         <svg viewBox="0 0 24 24" style="position: absolute; left: -14px; top: 6px; width: 30px; fill: #EC8A73;"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"></path></svg>
       </div>
-      <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 14px;">
+      <div data-story="" style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 14px;">
         <div data-reveal="up" style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px;">
           <p style="font-size: 16px; letter-spacing: .1em; color: #33476A; margin: 0;">主理人 Oli</p>
           <h3 style="font-size: 22px; font-weight: 700; line-height: 1.6; letter-spacing: .04em; margin: 0; padding-bottom: 14px; border-bottom: 2px solid #1B3A6B; text-wrap: pretty;">從自己的品牌開始，走進網站與獲客的世界</h3>
         </div>
         <p data-reveal="up" style="font-size: 17px; line-height: 1.85; color: #33476A; margin: 0;">一開始，我只是想把自己的專業做成一門生意。</p>
         <p data-reveal="up" style="font-size: 17px; line-height: 1.85; color: #33476A; margin: 0; text-wrap: pretty;">為了找到更多客戶，我開始學行銷、寫內容、做銷售漏斗、架網站、發電子報。真正開始後才發現，每一個看似簡單的環節，背後都是另一門專業。</p>
-        <p data-reveal="up" style="font-size: 17px; line-height: 1.85; color: #33476A; margin: 0; text-wrap: pretty;">明明最想解決的是「怎麼找到更多客戶」，時間卻常常花在「這個到底要怎麼設定？」</p>
+        <p data-reveal="up" style="font-size: 17px; line-height: 1.85; color: #33476A; margin: 0; text-wrap: pretty;">明明最想解決的是「怎麼找到更多客戶<span style="letter-spacing: -.45em;">」</span>，時間卻常常花在「這個到底要怎麼設定？」</p>
         <p data-reveal="up" style="font-size: 17px; line-height: 1.85; color: #33476A; margin: 0; text-wrap: pretty;">一路摸索下來，我學會了網站、內容、電子報與獲客流程，也更深刻地明白：</p>
-        <p data-reveal="up" style="font-size: 18px; font-weight: 700; line-height: 1.85; color: #1B3A6B; margin: 17px 0; text-wrap: pretty;"><span style="background: linear-gradient(transparent 62%, rgba(236,138,115,.55) 62%);">「我做得到」和「這件事值得我自己做」，是兩個不同的問題。</span></p>
+        <p data-reveal="up" style="font-size: 18px; font-weight: 700; line-height: 1.85; color: #1B3A6B; margin: 17px 0; text-wrap: pretty;"><span style="background: linear-gradient(transparent 62%, rgba(236,138,115,.55) 62%);">「我做得到」和「這件事值得我自己做<span style="letter-spacing: -.45em;">」</span>，是兩個不同的問題。</span></p>
         <p data-reveal="up" style="font-size: 17px; line-height: 1.85; color: #33476A; margin: 0;">這也成為我創立引力流域的起點。</p>
         <p data-reveal="up" style="font-size: 17px; line-height: 1.85; color: #33476A; margin: 0; text-wrap: pretty;">因為自己走過這條路，我知道網站後面真正連著的，是內容、名單、預約、服務，以及最後的生意。</p>
         <p data-reveal="up" style="font-size: 17px; line-height: 1.85; color: #33476A; margin: 0; text-wrap: pretty;">所以我想做的，不只是完成一個網站，而是把這些環節整理、串起來——</p>
@@ -234,7 +238,7 @@
       </div>
     </div>
 
-    <div data-secbody="" style="max-width: 1100px; margin: 72px auto 0; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 56px;">
+    <div data-secbody="" data-vals="" style="max-width: 1100px; margin: 72px auto 0; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 56px;">
       <sc-for list="{{ values }}" as="v" hint-placeholder-count="4">
         <article data-stack="" data-reveal="zoom" data-delay="{{ v.delay }}" style="position: relative; background: #E4E4E4; border: 2px solid #1B3A6B; box-shadow: 10px 10px 0 #EC8A73; padding: 40px 32px; display: flex; flex-direction: column; gap: 18px;">
           <div style="display: flex; align-items: center; gap: 16px;">
@@ -342,7 +346,7 @@
               <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="{{ s.fg }}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="{{ s.d }}"></path></svg>
             </span>
             <span style="position: relative; display: flex; flex-direction: column; gap: 2px; padding-left: 4px;">
-              <span aria-hidden="true" style="position: absolute; left: -6px; top: 50%; transform: translateY(-50%); font-size: 44px; font-weight: 900; line-height: 1; color: rgba(236,138,115,.24); pointer-events: none; user-select: none;">{{ s.no }}</span>
+              <span data-fnum="" aria-hidden="true" style="position: absolute; left: -6px; top: 50%; transform: translateY(-50%); font-size: 44px; font-weight: 900; line-height: 1; color: rgba(236,138,115,.24); pointer-events: none; user-select: none;">{{ s.no }}</span>
               <span style="position: relative; font-size: 17px; font-weight: 700; letter-spacing: .04em; color: #1B3A6B;">{{ s.label }}</span>
               <span style="position: relative; font-size: 15px; font-weight: 500; line-height: 1.7; color: #1B3A6B;">{{ s.desc }}</span>
             </span>
